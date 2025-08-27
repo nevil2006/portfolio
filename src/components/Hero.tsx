@@ -69,6 +69,7 @@ const Hero = () => {
               <span className="animate-pulse">|</span>
             </p>
           </div>
+          
 
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
           “Aspiring AI/ML/CV Engineer with a strong passion for developing intelligent solutions 
