@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Mail, Phone, MapPin, Github, Linkedin, Code, User } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,39 +13,36 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
+    const mailtoLink = `mailto:nevilj22@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    window.location.href = mailtoLink;
+
     setTimeout(() => {
       setIsSubmitting(false);
-      // Reset form
       setFormData({ name: '', email: '', subject: '', message: '' });
-      // Show success message (you can add toast here)
-      console.log('Message sent successfully!');
-    }, 2000);
+      console.log('Message triggered to email!');
+    }, 500);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      value: "nevil.j@example.com",
-      href: "mailto:nevil.j@example.com"
+      value: "nevilj22@gmail.com",
+      href: "mailto:nevilj22@gmail.com"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210"
+      value: "+91 93428 86761",
+      href: "tel:+919342886761"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -59,26 +56,14 @@ const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/nevil2006",
       username: "@nevil-j"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/nevilj/",
       username: "/in/nevil-j"
-    },
-    {
-      icon: <Code className="h-6 w-6" />,
-      label: "LeetCode",
-      href: "https://leetcode.com",
-      username: "@nevil_j"
-    },
-    {
-      icon: <User className="h-6 w-6" />,
-      label: "SkillRack",
-      href: "https://skillrack.com",
-      username: "@nevil_j"
     }
   ];
 
@@ -188,7 +173,6 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="slide-up space-y-8" style={{ animationDelay: '0.2s' }}>
-            {/* Contact Details */}
             <div className="glass-neon p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-6 text-gradient">Contact Information</h3>
               <div className="space-y-6">
