@@ -71,8 +71,8 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Passionate about solving real-world problems through AI and Machine Learning. 
-            Specializing in Computer Vision, Traffic Management Systems, and Interactive AI Applications.
+          “Aspiring AI/ML/CV Engineer with a strong passion for developing intelligent solutions 
+           and exploring cutting-edge technologies.”
           </p>
 
           {/* CTA Buttons */}
