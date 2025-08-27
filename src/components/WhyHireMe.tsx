@@ -4,32 +4,32 @@ const WhyHireMe = () => {
   const reasons = [
     {
       icon: <Bot className="h-10 w-10" />,
-      title: "AI Expertise",
-      description: "YOLOv8, CLIP, OpenCV, Vision-Language Models",
+      title: "AI & CV Expertise",
+      description: "Hands-on with YOLOv8, OpenCV, Vision-Language Models, and cutting-edge AI research.",
       highlight: "🤖"
     },
     {
       icon: <Trophy className="h-10 w-10" />,
-      title: "Proven Impact",
-      description: "AI Traffic Management (1st Prize Ideathon & Project Expo, approved by Police Commissioner)",
+      title: "Proven Achievements",
+      description: "Built a real-time AI Traffic Management System (1st Prize – Ideathon & Project Expo, validated by Police Commissioner).",
       highlight: "🏆"
     },
     {
       icon: <Briefcase className="h-10 w-10" />,
-      title: "Industry Experience",
-      description: "Internships at CMLI, Hizen.ai, SaiKet Systems",
+      title: "Practical Experience",
+      description: "Internships at CMLI, Hizen.ai, SaiKet Systems – delivering applied AI solutions.",
       highlight: "💼"
     },
     {
       icon: <BookOpen className="h-10 w-10" />,
-      title: "Continuous Learner",
-      description: "Research + open-source contributor",
-      highlight: "📚"
+      title: "Hackathons & Events",
+      description: "Actively participated in 10+ college tech events & 2+ national-level hackathons with innovative AI projects.",
+      highlight: "🎯"
     },
     {
       icon: <Zap className="h-10 w-10" />,
-      title: "Adaptable",
-      description: "Quick learner, team player, growth mindset",
+      title: "Continuous Growth",
+      description: "Research-driven learner, open-source contributor, adaptable & passionate about solving real-world problems.",
       highlight: "⚡"
     }
   ];
@@ -41,7 +41,7 @@ const WhyHireMe = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Why Hire Me?</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Combining technical expertise with proven results to deliver innovative AI solutions
+            Blending technical expertise, real-world impact, and competitive achievements to drive AI innovation.
           </p>
         </div>
 
@@ -78,18 +78,7 @@ const WhyHireMe = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16 slide-up">
-          <div className="glass p-8 rounded-2xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-gradient">Ready to Innovate Together?</h3>
-            <p className="text-muted-foreground mb-6">
-              Let's build the next generation of AI solutions that make a real difference.
-            </p>
-            <button className="btn-neon">
-              Let's Connect
-            </button>
-          </div>
-        </div>
+        {/* Removed the "Let's Connect" button section */}
       </div>
     </section>
   );

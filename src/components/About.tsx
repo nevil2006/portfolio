@@ -1,26 +1,21 @@
-import { Brain, Eye, Code, Zap } from 'lucide-react';
+import { Brain, Eye } from 'lucide-react';
 
 const About = () => {
   const interests = [
     {
       icon: <Brain className="h-8 w-8" />,
       title: "Vision-Language Models",
-      description: "Medical imaging analysis with CLIP and multimodal AI systems"
+      description: "Exploring multimodal AI systems like CLIP for medical imaging and cross-domain understanding."
     },
     {
       icon: <Eye className="h-8 w-8" />,
       title: "Real-time Computer Vision",
-      description: "YOLO + IoT integration for smart traffic and surveillance systems"
+      description: "Building robust traffic and surveillance solutions with YOLO and IoT integration."
     },
     {
-      icon: <Code className="h-8 w-8" />,
-      title: "NLP & Document Intelligence",
-      description: "BERT, prompt engineering, and intelligent document processing"
-    },
-    {
-      icon: <Zap className="h-8 w-8" />,
-      title: "Full-stack AI Systems",
-      description: "End-to-end AI applications with modern web technologies"
+      icon: <Brain className="h-8 w-8" />,
+      title: "Artificial Intelligence",
+      description: "Designing and deploying machine learning systems that bridge research with real-world impact."
     }
   ];
 
@@ -36,16 +31,18 @@ const About = () => {
           {/* Text Content */}
           <div className="slide-up">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              I'm an <span className="text-primary font-semibold">AI & Data Science student</span> passionate 
-              about solving real-world problems in traffic management, healthcare, and automation. 
-              With hands-on experience in building ML models and deploying interactive AI-driven web applications, 
-              I bridge the gap between cutting-edge research and practical solutions.
+              I’m a <span className="text-primary font-semibold">B.Tech AI & Data Science student</span> 
+              passionate about leveraging AI to solve real-world challenges in traffic management, 
+              healthcare, and automation. My focus lies in developing scalable and impactful AI systems 
+              with strong foundations in <span className="text-secondary font-semibold">computer vision</span> 
+              and <span className="text-secondary font-semibold">vision-language models</span>.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              My expertise spans from <span className="text-secondary font-semibold">computer vision algorithms</span> to 
-              full-stack development, allowing me to create comprehensive AI systems that make a real impact. 
-              I'm always exploring new technologies and contributing to open-source projects.
+              With hands-on experience in <span className="text-primary font-semibold">machine learning, 
+              deep learning, and real-time computer vision</span>, I aim to transform cutting-edge research 
+              into practical, industry-ready applications. I’m continuously exploring emerging AI 
+              technologies while contributing to innovative projects and collaborations.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -59,7 +56,7 @@ const About = () => {
               </div>
               <div className="glass px-4 py-2 rounded-lg">
                 <span className="text-primary font-mono">💼</span>
-                <span className="ml-2 text-sm">Industry Experience</span>
+                <span className="ml-2 text-sm">Research & Industry Exposure</span>
               </div>
             </div>
           </div>
