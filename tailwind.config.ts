@@ -105,6 +105,11 @@ export default {
 					}
 				}
 			},
+			boxShadow: {
+				'neon': '0 0 30px hsl(var(--primary) / 0.3)',
+				'glow': '0 10px 40px hsl(var(--primary) / 0.2)',
+				'glass': '0 8px 32px rgba(0, 0, 0, 0.37)',
+			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
