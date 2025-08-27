@@ -31,16 +31,20 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-card"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-background/80"></div>
+      {/* Professional Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="h-full w-full bg-[radial-gradient(circle,_hsl(var(--primary))_1px,_transparent_1px)] bg-[length:50px_50px]"></div>
+      </div>
+
+      {/* Subtle Accent Lines */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
+        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/10 to-transparent"></div>
+      </div>
 
       {/* Floating Tech Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
