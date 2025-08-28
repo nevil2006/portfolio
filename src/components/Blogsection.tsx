@@ -39,17 +39,17 @@ const BlogSection = () => {
     },
     {
       id: 2,
-      title: "Understanding AI Models in College Projects",
+      title: "Why Recruiters Value AI, ML, and Computer Vision Experience - and How Freshers Can Compete",
       excerpt:
-        "AI is becoming an essential part of engineering projects. Learn how students can implement AI models in real-world scenarios.",
-      content: "...",
+        "Exploring why recruiters prefer AI/ML/CV experience and how freshers can gain industry-level skills through real-world projects.",
+      content: "Learn why AI, ML, and Computer Vision experience is highly valued by recruiters, why freshers face challenges, and how real-world projects can bridge the gap to build industry-ready skills",
       date: "2025-08-20",
-      readTime: "comig soon",
+      readTime: "10 min read",
       category: "AI Models",
-      tags: ["AI", "Machine Learning", "Projects"],
+      tags: ["AI", "Machine Learning", "Computer Vision", "Projects", "Freshers", "Portfolio"],
       featured: false,
       views: 420,
-      link: "#",
+      link: "https://medium.com/@nevilj22/why-recruiters-value-ai-ml-and-computer-vision-experience-and-how-freshers-can-compete-8d1a0e7bab68",
     },
     {
       id: 3,
