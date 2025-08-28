@@ -5,16 +5,16 @@ const Experience = () => {
     {
       company: "CMLI",
       position: "Vision-Language Models Intern",
-      duration: "2024",
-      location: "Remote",
+      duration: "2025",
+      location: "Onsite",
       description: "Developed CLIP-based healthcare imaging solutions for medical diagnosis and analysis",
       technologies: ["CLIP", "PyTorch", "Computer Vision", "Healthcare AI"],
       type: "internship"
     },
     {
       company: "Hizen.ai",
-      position: "NLP Automation Intern",
-      duration: "2024",
+      position: "Machine learning Intern",
+      duration: "2023",
       location: "Remote",
       description: "Built NLP automation pipelines using BERT and advanced ML techniques for document processing",
       technologies: ["BERT", "NLP", "ML Pipelines", "Python"],

@@ -1,87 +1,87 @@
-import { Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="relative py-12 px-4 bg-gradient-to-t from-card to-background border-t border-glass-border">
-      <div className="max-w-6xl mx-auto">
-        {/* Main Footer Content */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Brand Section */}
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-gradient mb-4">NEVIL J</h3>
+    <footer className="py-12 border-t border-glass-border bg-gradient-glow">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
+          <div>
+            <h3 className="text-xl font-bold text-gradient mb-4">Nevil's Portfolio</h3>
             <p className="text-muted-foreground mb-4">
-              AI & Data Science student passionate about creating innovative solutions 
-              that bridge technology and real-world impact.
+              AI & Machine Learning Engineer passionate about creating intelligent solutions 
+              for real-world problems.
             </p>
-            <div className="flex justify-center md:justify-start space-x-2">
-              <span className="glass px-3 py-1 rounded-full text-xs text-primary">AI Expert</span>
-              <span className="glass px-3 py-1 rounded-full text-xs text-secondary">Computer Vision</span>
-              <span className="glass px-3 py-1 rounded-full text-xs text-primary">ML Engineer</span>
+            <div className="flex space-x-4">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+                 className="p-2 glass rounded-full hover:glow-primary transition-all duration-300">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                 className="p-2 glass rounded-full hover:glow-primary transition-all duration-300">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="mailto:contact@example.com"
+                 className="p-2 glass rounded-full hover:glow-primary transition-all duration-300">
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="text-center">
-            <h4 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h4>
-            <div className="space-y-2">
-              {['Home', 'About', 'Projects', 'Experience', 'Skills', 'Contact'].map((link) => (
-                <button
-                  key={link}
-                  onClick={() => {
-                    const element = document.getElementById(link.toLowerCase());
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="block text-muted-foreground hover:text-primary transition-colors duration-300 mx-auto"
-                >
-                  {link}
-                </button>
+          <div>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {['About', 'Experience', 'Education', 'Skills', 'Projects', 'Blog', 'Achievements', 'Contact'].map((item) => (
+                <li key={item}>
+                  <a href={`#${item.toLowerCase()}`} 
+                     className="text-muted-foreground hover:text-primary transition-colors">
+                    {item}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="text-center md:text-right">
-            <h4 className="text-lg font-semibold mb-4 text-foreground">Get In Touch</h4>
-            <div className="space-y-2 text-muted-foreground">
-              <p>nevilj22@gmail.com</p>
-              <p>Coimbatore, Tamil Nadu</p>
-            </div>
+          {/* Expertise */}
+          <div>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Expertise</h4>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Artificial Intelligence</li>
+              <li>• Machine Learning</li>
+              <li>• Computer Vision</li>
+              <li>• Traffic Management</li>
+              <li>• Deep Learning</li>
+              <li>• Performance Optimization</li>
+            </ul>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-glass-border to-transparent mb-8"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center text-muted-foreground mb-4 md:mb-0">
-            <span>Made with</span>
-            <Heart className="h-4 w-4 mx-2 text-red-500 fill-current animate-pulse" />
-            <span>© {currentYear} Nevil J. All rights reserved.</span>
+        <div className="pt-8 border-t border-glass-border">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center text-muted-foreground mb-4 md:mb-0">
+              <span>Made with</span>
+              <Heart className="w-4 h-4 mx-2 text-red-500 fill-current" />
+              <span>using React, TypeScript & Tailwind CSS</span>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <button 
+                onClick={scrollToTop}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Back to Top ↑
+              </button>
+              <span className="text-muted-foreground">
+                © 2024 Nevil. All rights reserved.
+              </span>
+            </div>
           </div>
-
-          {/* Scroll to Top Button */}
-          <button
-            onClick={scrollToTop}
-            className="glass p-3 rounded-full hover:glow-primary transition-all duration-300 group"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp className="h-5 w-5 text-primary group-hover:text-primary-glow transition-colors duration-300" />
-          </button>
-        </div>
-
-        {/* Additional Info */}
-        <div className="text-center mt-8 text-xs text-muted-foreground">
-          <p>
-            This portfolio showcases my journey in AI & Data Science. 
-            Always open to collaborating on innovative projects that make a difference.
-          </p>
         </div>
       </div>
     </footer>

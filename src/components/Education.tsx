@@ -42,9 +42,64 @@ const Education = () => {
     }
   ];
 
+  const certificationsData = [
+    {
+      degree: "Global Certification (Ongoing)",
+      field: "Oracle Certified Foundations Associate",
+      institution: "Oracle University",
+      duration: "2024 (Ongoing)",
+      location: "Online / Global",
+      keySubjects: [
+        "Database Fundamentals", "SQL Queries", "Data Modeling",
+        "Cloud Infrastructure", "Application Development Basics"
+      ],
+      highlights: [
+        "Currently pursuing Oracle Certified Foundations Associate credential",
+        "Building strong knowledge in database management and SQL",
+        "Hands-on exposure to Oracle Cloud Infrastructure",
+        "Working toward a global-standard certification in database technologies"
+      ]
+    },
+    {
+      degree: "AI & Data-Driven Certification (Ongoing)",
+      field: "Oracle Cloud Data Science Professional",
+      institution: "Oracle University",
+      duration: "2025 (Ongoing)",
+      location: "Online / Global",
+      keySubjects: [
+        "Machine Learning Workflows", "Model Training & Deployment",
+        "MLOps on Oracle Cloud", "Automated AI Pipelines"
+      ],
+      highlights: [
+        "Currently learning end-to-end ML lifecycle management",
+        "Hands-on with model deployment on Oracle Cloud Infrastructure",
+        "Focus on practical machine learning workflows",
+        "Aligned with core AI & Data Science engineering skills"
+      ]
+    },
+    {
+      degree: "AI & Data-Driven Certification (Ongoing)",
+      field: "Oracle Machine Learning using Autonomous Database",
+      institution: "Oracle University",
+      duration: "2025 (Ongoing)",
+      location: "Online / Global",
+      keySubjects: [
+        "In-Database Machine Learning", "Regression & Classification",
+        "Clustering Models", "Data + ML Integration"
+      ],
+      highlights: [
+        "Currently gaining experience with in-database ML techniques",
+        "Practical usage of regression, classification & clustering",
+        "Focus on integrating ML directly with enterprise data",
+        "Strengthens skills in real-world AI + database synergy"
+      ]
+    }
+  ];
+
   return (
     <section id="education" className="py-20 px-4 bg-gradient-to-br from-background via-muted/5 to-background">
       <div className="max-w-4xl mx-auto">
+        {/* Education Section */}
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Education</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
@@ -121,6 +176,75 @@ const Education = () => {
                 <h4 className="text-lg font-semibold text-foreground mb-3">Highlights</h4>
                 <div className="grid md:grid-cols-2 gap-3">
                   {edu.highlights.map((highlight, i) => (
+                    <div key={i} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-muted-foreground">{highlight}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Global Certifications Section */}
+        <div className="text-center mt-24 mb-16 fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Global Certifications</h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+          <p className="text-lg text-muted-foreground">
+            Validating skills with industry-recognized certifications
+          </p>
+        </div>
+
+        {certificationsData.map((cert, index) => (
+          <div key={index} className="slide-up mb-12">
+            <div className="glass-neon p-8 md:p-12 rounded-2xl group hover:scale-105 transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                <div className="flex items-center mb-4 md:mb-0">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-6 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
+                    <Award className="h-8 w-8 text-primary group-hover:text-primary-glow transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-gradient transition-all duration-300">
+                      {cert.degree}
+                    </h3>
+                    <p className="text-lg text-primary font-semibold">{cert.field}</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start md:items-end text-muted-foreground">
+                  <div className="flex items-center mb-2">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>{cert.duration}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    <span>{cert.location}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-xl font-bold text-foreground mb-2">{cert.institution}</h4>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-foreground mb-3">Key Subjects</h4>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  {cert.keySubjects.map((subject, i) => (
+                    <div 
+                      key={i}
+                      className="glass px-3 py-2 rounded-lg text-sm text-center hover:glow-primary transition-all duration-300"
+                    >
+                      {subject}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="border-t border-glass-border pt-4">
+                <h4 className="text-lg font-semibold text-foreground mb-3">Highlights</h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {cert.highlights.map((highlight, i) => (
                     <div key={i} className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <p className="text-muted-foreground">{highlight}</p>
