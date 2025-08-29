@@ -10,7 +10,7 @@ const BlogSection = () => {
       title: "Why Engineers Feel Difficult for the Life?",
       excerpt:
         "Engineering students and professionals often describe their journey as demanding and stressful, but also rewarding in the long run...",
-      date: "2025-08-28",
+      date: "2025-03-28",
       readTime: "6 min read",
       category: "Engineering Life",
       tags: ["Engineering", "Student Life", "Career Growth"],
@@ -23,7 +23,7 @@ const BlogSection = () => {
         "Why Recruiters Value AI, ML, and Computer Vision Experience – and How Freshers Can Compete?",
       excerpt:
         "Exploring why recruiters prefer AI/ML/CV experience and how freshers can gain industry-level skills...",
-      date: "2025-08-20",
+      date: "2024-12-15",
       readTime: "10 min read",
       category: "AI Models",
       tags: ["AI", "Machine Learning", "Computer Vision"],
@@ -35,12 +35,24 @@ const BlogSection = () => {
       title: "Random Forest – The Algorithm That Made Me Look Deeper into ML",
       excerpt:
         "A personal dive into how the Random Forest algorithm works and why it’s a powerful tool for machine learning enthusiasts...",
-      date: "2025-01-07",
+      date: "2023-01-07",
       readTime: "8 min read",
       category: "Machine Learning",
       tags: ["Random Forest", "ML", "Algorithms"],
       views: 350,
       link: "https://medium.com/@nevilj22/random-forest-the-algorithm-that-made-me-look-deeper-into-ml-5b0d0abc918d",
+    },
+    {
+      id: 4,
+      title: "How We Took an AI Traffic Project From Zero to Pilot Testing With Real Police Data",
+      excerpt:
+        "Our journey of building an AI-based traffic management system using real-time police data, YOLO object detection, and IoT devices...",
+      date: "2025-08-25", // 👈 Different month (June instead of August)
+      readTime: "9 min read",
+      category: "AI Models",
+      tags: ["AI", "Machine Learning", "Projects"],
+      views: 510,
+      link: "https://medium.com/p/a2814a14bc6b/edit",
     },
   ];
 
