@@ -30,6 +30,18 @@ const BlogSection = () => {
       views: 420,
       link: "https://medium.com/@nevilj22/why-recruiters-value-ai-ml-and-computer-vision-experience-and-how-freshers-can-compete-8d1a0e7bab68",
     },
+    {
+      id: 3,
+      title: "Random Forest – The Algorithm That Made Me Look Deeper into ML",
+      excerpt:
+        "A personal dive into how the Random Forest algorithm works and why it’s a powerful tool for machine learning enthusiasts...",
+      date: "2025-01-07",
+      readTime: "8 min read",
+      category: "Machine Learning",
+      tags: ["Random Forest", "ML", "Algorithms"],
+      views: 350,
+      link: "https://medium.com/@nevilj22/random-forest-the-algorithm-that-made-me-look-deeper-into-ml-5b0d0abc918d",
+    },
   ];
 
   return (
