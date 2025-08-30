@@ -47,12 +47,24 @@ const BlogSection = () => {
       title: "How We Took an AI Traffic Project From Zero to Pilot Testing With Real Police Data",
       excerpt:
         "Our journey of building an AI-based traffic management system using real-time police data, YOLO object detection, and IoT devices...",
-      date: "2025-08-25", // 👈 Different month (June instead of August)
+      date: "2025-08-25",
       readTime: "9 min read",
       category: "AI Models",
       tags: ["AI", "Machine Learning", "Projects"],
       views: 510,
       link: "https://medium.com/p/a2814a14bc6b/edit",
+    },
+    {
+      id: 5,
+      title: "How Indians Think About AI: From ChatGPT in Colleges to Myths in Rural India",
+      excerpt:
+        "AI is growing fast in India, but awareness is still uneven. In cities, students and professionals use ChatGPT daily, while in villages many still ask: 'What is AI?' This blog explores the contrast, challenges, and opportunities...",
+      date: "2025-01-29",
+      readTime: "7 min read",
+      category: "AI Awareness",
+      tags: ["AI", "India", "Rural Development"],
+      views: 275,
+      link: "https://medium.com/@nevilj22/how-indians-think-about-ai-from-chatgpt-in-colleges-to-myths-in-rural-india-123456",
     },
   ];
 
