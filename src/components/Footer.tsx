@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -64,12 +64,13 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="pt-8 border-t border-glass-border">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center text-muted-foreground mb-4 md:mb-0">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 mx-2 text-red-500 fill-current" />
-              <span>using React, TypeScript & Tailwind CSS</span>
-            </div>
             
+            {/* Made with Text */}
+            <div className="flex items-center text-muted-foreground mb-4 md:mb-0">
+              <span>Made with React, TypeScript & Tailwind CSS</span>
+            </div>
+
+            {/* Right Side */}
             <div className="flex items-center space-x-4">
               <button 
                 onClick={scrollToTop}
