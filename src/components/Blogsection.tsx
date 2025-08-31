@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -68,17 +69,43 @@ const BlogSection = () => {
     },
   ];
 
+  // state for selected category
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // extract unique categories
+  const categories = ["All", ...new Set(blogPosts.map((post) => post.category))];
+
+  // filter blogs
+  const filteredPosts =
+    selectedCategory === "All"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === selectedCategory);
+
   return (
     <section id="blog" className="py-20">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-gradient">Blog & Insights</h2>
           <p className="text-muted-foreground">Latest blogs and thoughts</p>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex justify-center gap-3 mb-8 flex-wrap">
+          {categories.map((cat) => (
+            <Button
+              key={cat}
+              variant={selectedCategory === cat ? "default" : "outline"}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </Button>
+          ))}
+        </div>
+
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {blogPosts.map((post) => (
+          {filteredPosts.map((post) => (
             <Card
               key={post.id}
               className="p-6 hover:glow-primary transition-all flex flex-col justify-between"
@@ -86,7 +113,7 @@ const BlogSection = () => {
               {/* Title */}
               <h3 className="text-xl font-bold mb-3">{post.title}</h3>
 
-              {/* Short Excerpt */}
+              {/* Excerpt */}
               <p className="text-muted-foreground mb-4 line-clamp-3">
                 {post.excerpt}
               </p>
@@ -111,7 +138,7 @@ const BlogSection = () => {
                 ))}
               </div>
 
-              {/* CTA Button */}
+              {/* CTA */}
               <a
                 href={post.link}
                 target="_blank"
