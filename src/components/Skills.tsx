@@ -26,11 +26,11 @@ const Skills = () => {
       icon: <Wrench className="h-6 w-6" />,
       skills: [
         { name: "OpenCV", level: 88, color: "from-green-600 to-green-700" },
-        { name: "YOLO (v5/v8)", level: 92, color: "from-primary to-primary-glow" },
+        { name: "YOLO (v5/v8/v11)", level: 92, color: "from-primary to-primary-glow" },
         { name: "DeepSORT", level: 80, color: "from-purple-500 to-pink-600" },
         { name: "Mediapipe", level: 78, color: "from-yellow-500 to-orange-500" },
         { name: "CLIP", level: 82, color: "from-indigo-500 to-indigo-700" },
-        { name: "Transformers", level: 84, color: "from-pink-500 to-purple-500" },
+        { name: "Bytetrack", level: 84, color: "from-pink-500 to-purple-500" },
       ]
     },
     {
