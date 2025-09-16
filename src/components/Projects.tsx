@@ -17,9 +17,9 @@ const FeaturedProjects = () => {
         " Reduced congestion and improved emergency vehicle prioritization through intelligent signal control."
     },
     {
-      title: "PathoVision: Breast Lesion Classification",
+      title: "pathology Image Analysis using CLIP and ResNet50",
       date: "Jun 2025 – Jul 2025",
-      link: "https://github.com/nevil2006/Vlm-clip",
+      link: "https://github.com/nevil2006/medical-analysis-app",
       objective:
         "Applied CLIP and ResNet50 for zero-shot and few-shot classification of breast lesions from histopathology images.",
       outcome:
