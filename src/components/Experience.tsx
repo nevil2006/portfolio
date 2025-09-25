@@ -20,15 +20,6 @@ const Experience = () => {
       technologies: ["BERT", "NLP", "ML Pipelines", "Python"],
       type: "internship"
     },
-    {
-      company: "SaiKet Systems",
-      position: "Machine Learning Intern",
-      duration: "2023",
-      location: "Hybrid",
-      description: "Conducted Exploratory Data Analysis and implemented Random Forest models for predictive analytics",
-      technologies: ["EDA", "Random Forest", "Data Analysis", "Scikit-learn"],
-      type: "internship"
-    }
   ];
 
   return (
