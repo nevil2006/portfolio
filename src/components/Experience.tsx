@@ -3,7 +3,7 @@ import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      company: "CMLI",
+      company: "CMLI(center for machine learning and intelligence)",
       position: "Vision-Language Models Intern",
       duration: "2025",
       location: "Onsite",
