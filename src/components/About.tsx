@@ -47,15 +47,12 @@ const About = () => {
 
             <div className="flex flex-wrap gap-4">
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-primary font-mono">🎓</span>
                 <span className="ml-2 text-sm">B.Tech AI & Data Science</span>
               </div>
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-secondary font-mono">🏆</span>
                 <span className="ml-2 text-sm">Competition Winner</span>
               </div>
               <div className="glass px-4 py-2 rounded-lg">
-                <span className="text-primary font-mono">💼</span>
                 <span className="ml-2 text-sm">Research & Industry Exposure</span>
               </div>
             </div>
