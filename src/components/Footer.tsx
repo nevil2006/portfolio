@@ -17,15 +17,15 @@ const Footer = () => {
               for real-world problems.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/nevil2006" target="_blank" rel="noopener noreferrer" 
                  className="p-2 glass rounded-full hover:glow-primary transition-all duration-300">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/nevilj/" target="_blank" rel="noopener noreferrer"
                  className="p-2 glass rounded-full hover:glow-primary transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:contact@example.com"
+              <a href="mailto:nevilj22@gmail.com"
                  className="p-2 glass rounded-full hover:glow-primary transition-all duration-300">
                 <Mail className="w-5 h-5" />
               </a>
