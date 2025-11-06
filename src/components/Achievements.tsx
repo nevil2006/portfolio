@@ -4,6 +4,16 @@ const Achievements = () => {
   const achievements = [
     {
       icon: <Trophy className="h-8 w-8" />,
+      title: "1st Prize - National Level Hackathon",
+      subtitle: "Trixathon - Sengunthar Engineering College",
+      description:
+        "Won 1st prize in the National Level Hackathon 'Trixathon' for building an impactful and scalable AI-driven solution. Demonstrated innovation, problem-solving, and teamwork.",
+      date: "2024",
+      category: "Hackathon",
+      impact: "National Recognition",
+    },
+    {
+      icon: <Trophy className="h-8 w-8" />,
       title: "1st Prize - Ideathon",
       subtitle: "Traffic Management System",
       description:
@@ -27,7 +37,7 @@ const Achievements = () => {
       title: "Police Commissioner Approval",
       subtitle: "Coimbatore Traffic Management",
       description:
-        "Official approval and recognition from the Coimbatore Police Commissioner for the Traffic Management System, validating its potential for real-world deployment.",
+        "Received official validation from the Coimbatore Police Commissioner for the proposed Traffic Management System, confirming its potential real-world deployment.",
       date: "2024",
       category: "Government Recognition",
       impact: "Official Validation",
@@ -35,8 +45,8 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { number: "3", label: "Major Awards", suffix: "+" },
-    { number: "2", label: "Competition Wins", suffix: "" },
+    { number: "4", label: "Major Awards", suffix: "+" },
+    { number: "3", label: "Competition Wins", suffix: "" },
     { number: "1", label: "Government Approval", suffix: "" },
     { number: "4", label: "Internal Tech Events", suffix: "+" },
     { number: "10", label: "Inter-College Events", suffix: "+" },
@@ -129,12 +139,12 @@ const Achievements = () => {
           ))}
         </div>
 
-        {/* Achievement Highlight */}
+        {/* Highlight Block */}
         <div className="mt-16 slide-up">
           <div className="glass-neon p-8 md:p-12 rounded-2xl text-center bg-gradient-to-br from-primary/5 to-secondary/5">
             <div className="max-w-4xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-gradient mb-6">
-                 Career Defining Moment
+                Career Defining Moment
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 The Traffic Management System represents a milestone in my journey – 
@@ -167,10 +177,10 @@ const Achievements = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
 };
 
 export default Achievements;
-
