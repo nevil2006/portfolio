@@ -71,7 +71,7 @@ const Education = () => {
     {
       degree: "AI & Deep Learning Certification (Ongoing)",
       field: "Hugging Face – Reinforcement Learning",
-      institution: "Hugging Face / Coursera",
+      institution: "Hugging Face ",
       duration: "2025 (Ongoing)",
       location: "Online / Global",
       keySubjects: [
@@ -90,7 +90,7 @@ const Education = () => {
     {
       degree: "AI & Vision Certification (Ongoing)",
       field: "Computer Vision – Deep Learning Specialization",
-      institution: "Coursera / DeepLearning.AI",
+      institution: "Hugging Face ",
       duration: "2025 (Ongoing)",
       location: "Online / Global",
       keySubjects: [
