@@ -79,6 +79,7 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          
           {/* Contact Form */}
           <div className="slide-up">
             <div className="glass-neon p-8 rounded-2xl">
@@ -90,31 +91,15 @@ const Contact = () => {
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Full Name
                     </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="glass border-glass-border focus:ring-primary focus:border-primary"
-                      placeholder="Your Name"
-                    />
+                    <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange}
+                      className="glass border-glass-border focus:ring-primary focus:border-primary" placeholder="Your Name" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email Address
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="glass border-glass-border focus:ring-primary focus:border-primary"
-                      placeholder="your.email@example.com"
-                    />
+                    <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange}
+                      className="glass border-glass-border focus:ring-primary focus:border-primary" placeholder="your.email@example.com" />
                   </div>
                 </div>
 
@@ -122,39 +107,20 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                     Subject
                   </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="glass border-glass-border focus:ring-primary focus:border-primary"
-                    placeholder="Project Collaboration"
-                  />
+                  <Input id="subject" name="subject" type="text" required value={formData.subject} onChange={handleChange}
+                    className="glass border-glass-border focus:ring-primary focus:border-primary" placeholder="Project Collaboration" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
+                  <Textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange}
                     className="glass border-glass-border focus:ring-primary focus:border-primary resize-none"
-                    placeholder="Tell me about your project or how we can work together..."
-                  />
+                    placeholder="Tell me about your project or how we can work together..." />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="btn-neon w-full group"
-                >
+                <Button type="submit" disabled={isSubmitting} className="btn-neon w-full group">
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2"></div>
@@ -171,71 +137,58 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="slide-up space-y-8" style={{ animationDelay: '0.2s' }}>
+          {/* Right Side */}
+          <div className="slide-up space-y-8" style={{ animationDelay: "0.2s" }}>
+            
+            {/* Contact Info */}
             <div className="glass-neon p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-6 text-gradient">Contact Information</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.href}
-                    className="flex items-center space-x-4 p-4 glass rounded-lg hover:glow-primary transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
-                      <div className="text-primary group-hover:text-primary-glow transition-colors duration-300">
-                        {info.icon}
-                      </div>
+                  <a key={index} href={info.href}
+                    className="flex items-center space-x-4 p-4 glass rounded-lg hover:glow-primary transition-all duration-300 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
+                      <div className="text-primary group-hover:text-primary-glow transition-colors duration-300">{info.icon}</div>
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">{info.label}</p>
-                      <p className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">
-                        {info.value}
-                      </p>
+                      <p className="text-foreground font-medium group-hover:text-primary transition-colors">{info.value}</p>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* Socials */}
             <div className="glass-neon p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-6 text-gradient">Find Me Online</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center p-4 glass rounded-lg hover:glow-primary transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center mb-3 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
-                      <div className="text-primary group-hover:text-primary-glow transition-colors duration-300">
-                        {social.icon}
-                      </div>
+                  <a key={index} href={social.href} target="_blank" rel="noopener noreferrer"
+                    className="flex flex-col items-center p-4 glass rounded-lg hover:glow-primary transition-all group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center mb-3">
+                      <div className="text-primary group-hover:text-primary-glow">{social.icon}</div>
                     </div>
-                    <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300 text-center">
-                      {social.label}
-                    </p>
-                    <p className="text-xs text-muted-foreground text-center">
-                      {social.username}
-                    </p>
+                    <p className="text-sm font-medium text-foreground group-hover:text-primary">{social.label}</p>
+                    <p className="text-xs text-muted-foreground">{social.username}</p>
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* AI Assistant Teaser */}
+            {/* ✅ AI Assistant (Active) */}
             <div className="glass-neon p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5">
-              <h3 className="text-xl font-bold mb-4 text-gradient">🤖 Ask Nevil AI (Coming Soon)</h3>
+              <h3 className="text-xl font-bold mb-4 text-gradient">🤖 Ask Nevil AI</h3>
               <p className="text-muted-foreground mb-4">
-                Get instant answers about my experience, projects, and skills through an AI-powered chatbot.
+                Chat with my AI assistant to learn about my skills, projects, and background.
               </p>
-              <Button className="btn-glass w-full" disabled>
-                Launch AI Assistant
+              <Button className="btn-glass w-full"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Open Chat (Bottom Right)
               </Button>
             </div>
+
           </div>
         </div>
       </div>
