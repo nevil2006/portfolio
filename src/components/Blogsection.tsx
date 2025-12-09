@@ -55,7 +55,8 @@ const BlogSection = () => {
       views: 510,
       link: "https://medium.com/p/a2814a14bc6b/edit",
     },
-  
+  ]; //  ✅ THIS ] WAS MISSING EARLIER
+
   // state for selected category
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -71,13 +72,12 @@ const BlogSection = () => {
   return (
     <section id="blog" className="py-20">
       <div className="container mx-auto px-4">
-        {/* Header */}
+
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-gradient">Blog & Insights</h2>
           <p className="text-muted-foreground">Latest blogs and thoughts</p>
         </div>
 
-        {/* Category Filter */}
         <div className="flex justify-center gap-3 mb-8 flex-wrap">
           {categories.map((cat) => (
             <Button
@@ -90,22 +90,18 @@ const BlogSection = () => {
           ))}
         </div>
 
-        {/* Blog Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {filteredPosts.map((post) => (
             <Card
               key={post.id}
               className="p-6 hover:glow-primary transition-all flex flex-col justify-between"
             >
-              {/* Title */}
               <h3 className="text-xl font-bold mb-3">{post.title}</h3>
 
-              {/* Excerpt */}
               <p className="text-muted-foreground mb-4 line-clamp-3">
                 {post.excerpt}
               </p>
 
-              {/* Meta Info */}
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-1" /> {post.date}
@@ -116,7 +112,6 @@ const BlogSection = () => {
                 <span>{post.views} views</span>
               </div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {post.tags.map((tag, i) => (
                   <Badge key={i} variant="outline">
@@ -125,7 +120,6 @@ const BlogSection = () => {
                 ))}
               </div>
 
-              {/* CTA */}
               <a
                 href={post.link}
                 target="_blank"
