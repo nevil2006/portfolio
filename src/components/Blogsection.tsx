@@ -55,20 +55,7 @@ const BlogSection = () => {
       views: 510,
       link: "https://medium.com/p/a2814a14bc6b/edit",
     },
-    {
-      id: 5,
-      title: "How Indians Think About AI: From ChatGPT in Colleges to Myths in Rural India",
-      excerpt:
-        "AI is growing fast in India, but awareness is still uneven. In cities, students and professionals use ChatGPT daily, while in villages many still ask: 'What is AI?' This blog explores the contrast, challenges, and opportunities...",
-      date: "2025-01-29",
-      readTime: "7 min read",
-      category: "AI Awareness",
-      tags: ["AI", "India", "Rural Development"],
-      views: 275,
-      link: "https://medium.com/@nevilj22/how-indians-think-about-ai-from-chatgpt-in-colleges-to-myths-in-rural-india-123456",
-    },
-  ];
-
+  
   // state for selected category
   const [selectedCategory, setSelectedCategory] = useState("All");
 
