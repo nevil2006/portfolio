@@ -55,6 +55,21 @@ const FeaturedProjects = () => {
       highlight:
         "Improved privacy compliance via automated redaction."
     },
+    {
+      {
+  title: "AI-Based Cyber Threat Detection System",
+  date: "Aug 2025 – Sep 2025",
+  link: "https://github.com/nevil2006/AI_Threat_Detection_Project",
+  objective:
+    "Developed an AI-driven system to detect abnormal system behavior and potential cyber threats using anomaly detection."
+  outcome:
+    "Successfully identified suspicious activities by learning normal behavior baselines and generating risk-based security alerts."
+  skills:
+    "Python, Machine Learning, Isolation Forest, NumPy, Scikit-learn, Cybersecurity",
+  highlight:
+    "Enabled detection of zero-day and ransomware threats through behavior-based analysis without relying on known attack signatures."
+},
+    }
   ];
 
   const ongoingProjects = [
