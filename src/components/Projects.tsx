@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
       objective:
         "Used CLIP & ResNet50 for zero-shot & few-shot breast lesion classification.",
       outcome:
-        "Achieved interpretable diagnosis assistance with accuracy, F1-score evaluations.",
+        "Achieved interpretable diagnosis assistance with accuracy and F1-score evaluations.",
       skills: "CLIP, RN50, PyTorch, Prompt Engineering",
       highlight:
         "Enhanced diagnostic decision-making through multimodal learning."
@@ -56,19 +56,17 @@ const FeaturedProjects = () => {
         "Improved privacy compliance via automated redaction."
     },
     {
-      {
-  title: "AI-Based Cyber Threat Detection System",
-  date: "Aug 2025 – Sep 2025",
-  link: "https://github.com/nevil2006/AI_Threat_Detection_Project",
-  objective:
-    "Developed an AI-driven system to detect abnormal system behavior and potential cyber threats using anomaly detection."
-  outcome:
-    "Successfully identified suspicious activities by learning normal behavior baselines and generating risk-based security alerts."
-  skills:
-    "Python, Machine Learning, Isolation Forest, NumPy, Scikit-learn, Cybersecurity",
-  highlight:
-    "Enabled detection of zero-day and ransomware threats through behavior-based analysis without relying on known attack signatures."
-},
+      title: "AI-Based Cyber Threat Detection System",
+      date: "Aug 2025 – Sep 2025",
+      link: "https://github.com/nevil2006/AI_Threat_Detection_Project",
+      objective:
+        "Developed an AI-driven system to detect abnormal system behavior and potential cyber threats using anomaly detection.",
+      outcome:
+        "Successfully identified suspicious activities by learning normal behavior baselines and generating risk-based security alerts.",
+      skills:
+        "Python, Machine Learning, Isolation Forest, NumPy, Scikit-learn, Cybersecurity",
+      highlight:
+        "Enabled detection of zero-day and ransomware threats through behavior-based analysis."
     }
   ];
 
@@ -83,7 +81,7 @@ const FeaturedProjects = () => {
         "Generates tailored roadmaps, skill analysis, and role-based course recommendations.",
       skills: "Next.js, Tailwind, FastAPI, ML Models, Vector Embeddings",
       highlight:
-        "Helps students & professionals identify career roles and learning paths using AI."
+        "Helps students and professionals identify career roles and learning paths using AI."
     },
   ];
 
