@@ -1,7 +1,17 @@
-import { Trophy, Award, CheckCircle, Star } from 'lucide-react';
+import { Trophy, Award, CheckCircle, Star } from "lucide-react";
 
 const Achievements = () => {
   const achievements = [
+    {
+      icon: <Trophy className="h-8 w-8" />,
+      title: "Best Team – National Level Hackathon",
+      subtitle: "IFET Hack Warriors ’26 | IFET College of Engineering, Villupuram",
+      description:
+        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon held from 23rd to 24th January 2026. Worked alongside team members Diwakaran Balakrishnan and Mithunavannan J.R to solve real-world problems under strict time constraints. The experience strengthened my technical competence, analytical thinking, innovation, and collaborative skills in a high-pressure environment.",
+      date: "2026",
+      category: "National Hackathon",
+      impact: "Best Team Award",
+    },
     {
       icon: <Trophy className="h-8 w-8" />,
       title: "1st Prize - National Level Hackathon",
@@ -45,12 +55,12 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { number: "4", label: "Major Awards", suffix: "+" },
-    { number: "3", label: "Competition Wins", suffix: "" },
+    { number: "5", label: "Major Awards", suffix: "+" },
+    { number: "4", label: "Competition Wins", suffix: "" },
     { number: "1", label: "Government Approval", suffix: "" },
     { number: "4", label: "Internal Tech Events", suffix: "+" },
     { number: "10", label: "Inter-College Events", suffix: "+" },
-    { number: "2", label: "National Tech Events", suffix: "+" },
+    { number: "3", label: "National Tech Events", suffix: "+" },
   ];
 
   return (
@@ -73,9 +83,8 @@ const Achievements = () => {
             <div
               key={index}
               className="glass-neon p-6 rounded-xl text-center group hover:scale-105 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-gradient mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
                 {stat.number}
                 {stat.suffix}
               </div>
@@ -92,15 +101,12 @@ const Achievements = () => {
             <div
               key={index}
               className="glass-neon p-8 rounded-2xl group hover:scale-105 transition-all duration-500 slide-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="grid md:grid-cols-12 gap-6 items-center">
                 {/* Icon & Category */}
                 <div className="md:col-span-3 text-center md:text-left">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-4 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
-                    <div className="text-primary group-hover:text-primary-glow transition-colors duration-300">
-                      {achievement.icon}
-                    </div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-4">
+                    <div className="text-primary">{achievement.icon}</div>
                   </div>
                   <div className="space-y-2">
                     <span className="glass px-3 py-1 rounded-full text-xs text-primary font-medium">
@@ -114,13 +120,13 @@ const Achievements = () => {
 
                 {/* Content */}
                 <div className="md:col-span-7">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 group-hover:text-gradient transition-all duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">
                     {achievement.title}
                   </h3>
                   <h4 className="text-lg text-primary font-semibold mb-4">
                     {achievement.subtitle}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                  <p className="text-muted-foreground leading-relaxed">
                     {achievement.description}
                   </p>
                 </div>
@@ -129,7 +135,7 @@ const Achievements = () => {
                 <div className="md:col-span-2 text-center md:text-right">
                   <div className="inline-flex items-center glass px-4 py-2 rounded-lg">
                     <Star className="h-4 w-4 text-yellow-500 mr-2" />
-                    <span className="text-sm font-medium text-foreground">
+                    <span className="text-sm font-medium">
                       {achievement.impact}
                     </span>
                   </div>
@@ -138,46 +144,6 @@ const Achievements = () => {
             </div>
           ))}
         </div>
-
-        {/* Highlight Block */}
-        <div className="mt-16 slide-up">
-          <div className="glass-neon p-8 md:p-12 rounded-2xl text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-            <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold text-gradient mb-6">
-                Career Defining Moment
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                The Traffic Management System represents a milestone in my journey – 
-                from conceptualization to winning competitions, participating in over 
-                15+ tech events across states, and receiving official government approval. 
-                This project showcases my ability to translate cutting-edge research into 
-                practical, impactful solutions that address real-world challenges.
-              </p>
-
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="glass p-4 rounded-lg">
-                  <h4 className="font-semibold text-primary mb-2">Innovation</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Computer Vision & IoT powered solutions
-                  </p>
-                </div>
-                <div className="glass p-4 rounded-lg">
-                  <h4 className="font-semibold text-secondary mb-2">Recognition</h4>
-                  <p className="text-sm text-muted-foreground">
-                    4+ internal, 10+ inter-college & 2+ national tech events
-                  </p>
-                </div>
-                <div className="glass p-4 rounded-lg">
-                  <h4 className="font-semibold text-primary mb-2">Impact</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Government approval for real-world implementation
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
