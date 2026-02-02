@@ -7,7 +7,7 @@ const Achievements = () => {
       title: "Best Team – National Level Hackathon",
       subtitle: "IFET Hack Warriors ’26 | IFET College of Engineering, Villupuram",
       description:
-        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon held from 23rd to 24th January 2026. Collaborated with team members Diwakaran Balakrishnan and Mithunavannan J.R to solve real-world problems under strict time constraints, strengthening technical competence, analytical thinking, innovation, and teamwork in a high-pressure environment.",
+        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon conducted from 23rd to 24th January 2026.",
       date: "2026",
       category: "National Hackathon",
       impact: "Best Team Award",
