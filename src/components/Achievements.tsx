@@ -7,7 +7,7 @@ const Achievements = () => {
       title: "Best Team – National Level Hackathon",
       subtitle: "IFET Hack Warriors ’26 | IFET College of Engineering, Villupuram",
       description:
-        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon held from 23rd to 24th January 2026. Worked alongside team members Diwakaran Balakrishnan and Mithunavannan J.R to solve real-world problems under strict time constraints. The experience strengthened my technical competence, analytical thinking, innovation, and collaborative skills in a high-pressure environment.",
+        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon held from 23rd to 24th January 2026. Collaborated with team members Diwakaran Balakrishnan and Mithunavannan J.R to solve real-world problems under strict time constraints, strengthening technical competence, analytical thinking, innovation, and teamwork in a high-pressure environment.",
       date: "2026",
       category: "National Hackathon",
       impact: "Best Team Award",
@@ -47,7 +47,7 @@ const Achievements = () => {
       title: "Police Commissioner Approval",
       subtitle: "Coimbatore Traffic Management",
       description:
-        "Received official validation from the Coimbatore Police Commissioner for the proposed Traffic Management System, confirming its potential real-world deployment.",
+        "Received official validation from the Coimbatore Police Commissioner for the proposed Traffic Management System, confirming its potential for real-world deployment.",
       date: "2024",
       category: "Government Recognition",
       impact: "Official Validation",
@@ -77,12 +77,12 @@ const Achievements = () => {
           </p>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="glass-neon p-6 rounded-xl text-center group hover:scale-105 transition-all duration-300"
+              className="glass-neon p-6 rounded-xl text-center hover:scale-105 transition-all duration-300"
             >
               <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
                 {stat.number}
@@ -95,30 +95,26 @@ const Achievements = () => {
           ))}
         </div>
 
-        {/* Achievements Grid */}
+        {/* Achievements */}
         <div className="space-y-8">
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="glass-neon p-8 rounded-2xl group hover:scale-105 transition-all duration-500 slide-up"
+              className="glass-neon p-8 rounded-2xl hover:scale-105 transition-all duration-500"
             >
               <div className="grid md:grid-cols-12 gap-6 items-center">
-                {/* Icon & Category */}
                 <div className="md:col-span-3 text-center md:text-left">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto md:mx-0 mb-4">
                     <div className="text-primary">{achievement.icon}</div>
                   </div>
-                  <div className="space-y-2">
-                    <span className="glass px-3 py-1 rounded-full text-xs text-primary font-medium">
-                      {achievement.category}
-                    </span>
-                    <p className="text-sm text-muted-foreground">
-                      {achievement.date}
-                    </p>
-                  </div>
+                  <span className="glass px-3 py-1 rounded-full text-xs text-primary font-medium">
+                    {achievement.category}
+                  </span>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    {achievement.date}
+                  </p>
                 </div>
 
-                {/* Content */}
                 <div className="md:col-span-7">
                   <h3 className="text-xl md:text-2xl font-bold mb-2">
                     {achievement.title}
@@ -131,7 +127,6 @@ const Achievements = () => {
                   </p>
                 </div>
 
-                {/* Impact Badge */}
                 <div className="md:col-span-2 text-center md:text-right">
                   <div className="inline-flex items-center glass px-4 py-2 rounded-lg">
                     <Star className="h-4 w-4 text-yellow-500 mr-2" />
