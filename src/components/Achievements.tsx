@@ -4,50 +4,70 @@ const Achievements = () => {
   const achievements = [
     {
       icon: <Trophy className="h-8 w-8" />,
+      title: "Overall Winner – National Level Hackathon",
+      subtitle: "Inter-College / National Hackathon",
+      description:
+        "Secured the Overall Winner title by delivering a high-impact AI-based solution evaluated on innovation, feasibility, and real-world applicability.",
+      date: "2025",
+      category: "National Hackathon",
+      impact: "Overall Winner",
+    },
+    {
+      icon: <Trophy className="h-8 w-8" />,
       title: "Best Team – National Level Hackathon",
       subtitle: "IFET Hack Warriors ’26 | IFET College of Engineering, Villupuram",
       description:
-        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon conducted from 23rd to 24th January 2026.",
+        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon, for strong collaboration, execution quality, and problem-solving.",
       date: "2026",
       category: "National Hackathon",
       impact: "Best Team Award",
     },
     {
       icon: <Trophy className="h-8 w-8" />,
-      title: "1st Prize - National Level Hackathon",
-      subtitle: "Trixathon - Sengunthar Engineering College",
+      title: "1st Prize – National Level Hackathon",
+      subtitle: "Trixathon | Sengunthar Engineering College",
       description:
-        "Won 1st prize in the National Level Hackathon 'Trixathon' for building an impactful and scalable AI-driven solution. Demonstrated innovation, problem-solving, and teamwork.",
+        "Won 1st Prize for building an AI-driven solution demonstrating innovation, scalability, and practical relevance under time constraints.",
       date: "2024",
       category: "Hackathon",
-      impact: "National Recognition",
-    },
-    {
-      icon: <Trophy className="h-8 w-8" />,
-      title: "1st Prize - Ideathon",
-      subtitle: "Traffic Management System",
-      description:
-        "Won first place in the prestigious Ideathon competition for developing an innovative traffic management solution using computer vision and IoT technologies.",
-      date: "2024",
-      category: "Competition",
-      impact: "Regional Recognition",
+      impact: "First Prize",
     },
     {
       icon: <Award className="h-8 w-8" />,
-      title: "1st Prize - Project Expo",
-      subtitle: "SNS Institute",
+      title: "1st Prize – Project Expo",
+      subtitle: "SNS Institute of Technology",
       description:
-        "Secured first place at the SNS Institute Project Expo for presenting a comprehensive traffic system that impressed judges with its practical implementation and real-world impact.",
+        "Secured First Prize at a Project Expo by presenting a real-world AI-based traffic management system with strong technical validation.",
       date: "2024",
-      category: "Exhibition",
-      impact: "Academic Excellence",
+      category: "Project Expo",
+      impact: "First Prize",
+    },
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: "1st Prize – Ideathon",
+      subtitle: "AI-Based Traffic Management System",
+      description:
+        "Won First Prize in an Ideathon for proposing an innovative traffic management solution using Computer Vision and IoT concepts.",
+      date: "2024",
+      category: "Ideathon",
+      impact: "First Prize",
+    },
+    {
+      icon: <Star className="h-8 w-8" />,
+      title: "Finalist – National Level Hackathon",
+      subtitle: "Shortlisted Among Top Teams",
+      description:
+        "Selected as a finalist among multiple competing teams, recognized for technical depth, innovation, and solution feasibility.",
+      date: "2023",
+      category: "National Hackathon",
+      impact: "Finalist",
     },
     {
       icon: <CheckCircle className="h-8 w-8" />,
-      title: "Police Commissioner Approval",
-      subtitle: "Coimbatore Traffic Management",
+      title: "Government Project Validation",
+      subtitle: "Traffic Management System | Coimbatore",
       description:
-        "Received official validation from the Coimbatore Police Commissioner for the proposed Traffic Management System, confirming its potential for real-world deployment.",
+        "AI-based traffic management system reviewed and approved for pilot consideration by the Commissioner of Police, Coimbatore.",
       date: "2024",
       category: "Government Recognition",
       impact: "Official Validation",
@@ -55,12 +75,12 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { number: "5", label: "Major Awards", suffix: "+" },
-    { number: "4", label: "Competition Wins", suffix: "" },
-    { number: "1", label: "Government Approval", suffix: "" },
-    { number: "4", label: "Internal Tech Events", suffix: "+" },
-    { number: "10", label: "Inter-College Events", suffix: "+" },
-    { number: "3", label: "National Tech Events", suffix: "+" },
+    { number: "6", label: "Major Awards", suffix: "" },
+    { number: "3", label: "First Prizes", suffix: "" },
+    { number: "1", label: "Overall Winner", suffix: "" },
+    { number: "1", label: "Best Team Award", suffix: "" },
+    { number: "1", label: "Finalist", suffix: "" },
+    { number: "29", label: "Total Tech Events", suffix: "+" },
   ];
 
   return (
@@ -72,8 +92,8 @@ const Achievements = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Recognition for innovation, technical excellence, and real-world
-            impact in AI, Data Science, and National/Inter-College Competitions
+            Recognitions for innovation, technical excellence, teamwork, and
+            real-world impact across national and inter-college competitions.
           </p>
         </div>
 
