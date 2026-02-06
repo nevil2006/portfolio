@@ -42,6 +42,19 @@ const Achievements = () => {
       category: "Project Expo",
       impact: "First Prize",
     },
+
+    /* ✅ NEWLY ADDED DESIGNATHON ENTRY */
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: "III Prize – Designathon ’25 (Project Expo)",
+      subtitle: "KPR Institute of Engineering and Technology",
+      description:
+        "Awarded III Prize at Designathon ’25 Project Expo, organized by the Department of Civil Engineering, for presenting an innovative and technically sound project solution.",
+      date: "2025",
+      category: "Project Expo",
+      impact: "III Prize",
+    },
+
     {
       icon: <Award className="h-8 w-8" />,
       title: "1st Prize – Ideathon",
@@ -75,7 +88,7 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { number: "6", label: "Major Awards", suffix: "" },
+    { number: "7", label: "Major Awards", suffix: "" },
     { number: "3", label: "First Prizes", suffix: "" },
     { number: "1", label: "Overall Winner", suffix: "" },
     { number: "1", label: "Best Team Award", suffix: "" },
@@ -115,7 +128,7 @@ const Achievements = () => {
           ))}
         </div>
 
-        {/* Achievements */}
+        {/* Achievements Cards */}
         <div className="space-y-8">
           {achievements.map((achievement, index) => (
             <div
