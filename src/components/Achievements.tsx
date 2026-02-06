@@ -4,75 +4,82 @@ const Achievements = () => {
   const achievements = [
     {
       icon: <Trophy className="h-8 w-8" />,
-      title: "Overall Winner – National Level Hackathon",
-      subtitle: "Inter-College / National Hackathon",
-      description:
-        "Secured the Overall Winner title by delivering a high-impact AI-based solution evaluated on innovation, feasibility, and real-world applicability.",
-      date: "2025",
-      category: "National Hackathon",
-      impact: "Overall Winner",
-    },
-    {
-      icon: <Trophy className="h-8 w-8" />,
-      title: "Best Team – National Level Hackathon",
-      subtitle: "IFET Hack Warriors ’26 | IFET College of Engineering, Villupuram",
-      description:
-        "Awarded Best Team at IFET Hack Warriors ’26, a 24-hour National-Level Hackathon, for strong collaboration, execution quality, and problem-solving.",
-      date: "2026",
-      category: "National Hackathon",
-      impact: "Best Team Award",
-    },
-    {
-      icon: <Trophy className="h-8 w-8" />,
       title: "1st Prize – National Level Hackathon",
-      subtitle: "Trixathon | Sengunthar Engineering College",
+      subtitle: "Sri Sengunthar Engineering College, Erode",
       description:
-        "Won 1st Prize for building an AI-driven solution demonstrating innovation, scalability, and practical relevance under time constraints.",
+        "Secured First Prize for developing an AI-based solution evaluated on innovation, execution quality, and real-world applicability.",
       date: "2024",
-      category: "Hackathon",
+      category: "National Hackathon",
       impact: "First Prize",
     },
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "1st Prize – Project Expo",
-      subtitle: "SNS Institute of Technology",
-      description:
-        "Secured First Prize at a Project Expo by presenting a real-world AI-based traffic management system with strong technical validation.",
-      date: "2024",
-      category: "Project Expo",
-      impact: "First Prize",
-    },
-
-    /* ✅ NEWLY ADDED DESIGNATHON ENTRY */
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "III Prize – Designathon ’25 (Project Expo)",
-      subtitle: "KPR Institute of Engineering and Technology",
-      description:
-        "Awarded III Prize at Designathon ’25 Project Expo, organized by the Department of Civil Engineering, for presenting an innovative and technically sound project solution.",
-      date: "2025",
-      category: "Project Expo",
-      impact: "III Prize",
-    },
-
     {
       icon: <Award className="h-8 w-8" />,
       title: "1st Prize – Ideathon",
-      subtitle: "AI-Based Traffic Management System",
+      subtitle: "SNS College of Engineering, Coimbatore",
       description:
-        "Won First Prize in an Ideathon for proposing an innovative traffic management solution using Computer Vision and IoT concepts.",
+        "Won First Prize for proposing an innovative AI-driven idea addressing real-world challenges.",
       date: "2024",
       category: "Ideathon",
       impact: "First Prize",
     },
     {
-      icon: <Star className="h-8 w-8" />,
-      title: "Finalist – National Level Hackathon",
-      subtitle: "Shortlisted Among Top Teams",
+      icon: <Award className="h-8 w-8" />,
+      title: "1st Prize – Project Expo",
+      subtitle: "SNS College of Engineering, Coimbatore",
       description:
-        "Selected as a finalist among multiple competing teams, recognized for technical depth, innovation, and solution feasibility.",
-      date: "2023",
+        "Secured First Prize at a Project Expo for presenting a practically implemented and impactful technical project.",
+      date: "2024",
+      category: "Project Expo",
+      impact: "First Prize",
+    },
+    {
+      icon: <Trophy className="h-8 w-8" />,
+      title: "Best Team Award – National Level Hackathon",
+      subtitle: "IFET College of Engineering, Villupuram",
+      description:
+        "Awarded Best Team for outstanding collaboration, execution quality, and problem-solving in a 24-hour national-level hackathon.",
+      date: "2026",
       category: "National Hackathon",
+      impact: "Best Team",
+    },
+    {
+      icon: <Trophy className="h-8 w-8" />,
+      title: "Best Team Award – Technical Hackathon",
+      subtitle: "Sri Venkateswara College of Engineering (SVCE), Chennai",
+      description:
+        "Recognized as Best Team for delivering a technically strong and well-coordinated solution.",
+      date: "2024",
+      category: "Hackathon",
+      impact: "Best Team",
+    },
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: "III Prize – Designathon",
+      subtitle: "KPR Institute of Engineering and Technology",
+      description:
+        "Secured III Prize at Designathon for presenting an innovative and technically sound project solution.",
+      date: "2025",
+      category: "Project Expo",
+      impact: "III Prize",
+    },
+    {
+      icon: <Star className="h-8 w-8" />,
+      title: "Finalist – Hack Horizon",
+      subtitle: "Karpagam College of Engineering",
+      description:
+        "Selected as a finalist among multiple teams for demonstrating innovation, feasibility, and technical depth.",
+      date: "2024",
+      category: "Hackathon",
+      impact: "Finalist",
+    },
+    {
+      icon: <Star className="h-8 w-8" />,
+      title: "Finalist – Intel Gen-AI Hackathon",
+      subtitle: "KPR Institute of Engineering and Technology",
+      description:
+        "Shortlisted as a finalist in a Generative AI hackathon focused on innovative AI-driven solutions.",
+      date: "2024",
+      category: "Hackathon",
       impact: "Finalist",
     },
     {
@@ -88,17 +95,17 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { number: "7", label: "Major Awards", suffix: "" },
+    { number: "8", label: "Major Awards", suffix: "" },
     { number: "3", label: "First Prizes", suffix: "" },
-    { number: "1", label: "Overall Winner", suffix: "" },
-    { number: "1", label: "Best Team Award", suffix: "" },
-    { number: "1", label: "Finalist", suffix: "" },
+    { number: "2", label: "Best Team Awards", suffix: "" },
+    { number: "2", label: "Finalist Selections", suffix: "" },
     { number: "29", label: "Total Tech Events", suffix: "+" },
   ];
 
   return (
     <section id="achievements" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
             Achievements
@@ -128,7 +135,7 @@ const Achievements = () => {
           ))}
         </div>
 
-        {/* Achievements Cards */}
+        {/* Achievement Cards */}
         <div className="space-y-8">
           {achievements.map((achievement, index) => (
             <div
