@@ -1,56 +1,81 @@
-import { Code, Brain, Wrench, Database } from "lucide-react";
+import { Code, Brain, Cpu, Database, Wrench, Rocket } from "lucide-react";
 
 const Skills = () => {
   const skillSections = [
     {
-      title: "Languages & Frameworks",
+      title: "Programming & Core Tech",
       icon: <Code className="h-6 w-6" />,
-      items: ["Python", "JavaScript", "HTML", "CSS", "Bootstrap", "SQL"],
+      items: [
+        "Python",
+        "JavaScript",
+        "SQL",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+      ],
     },
+
     {
-      title: "Machine Learning & Data Science",
+      title: "Machine Learning & Data Pipeline",
       icon: <Brain className="h-6 w-6" />,
       items: [
-        "Linear Regression",
-        "Polynomial Regression",
-        "Lasso Regression",
-        "Ridge Regression",
+        "Supervised & Unsupervised Learning",
+        "Feature Engineering",
+        "Data Cleaning & Preprocessing",
+        "Model Evaluation (Precision, Recall, F1)",
+        "Hyperparameter Tuning",
+        "Experimentation & Model Optimization",
       ],
-      description:
-        "Used for regression problems, feature selection, overfitting control, and model optimization.",
     },
+
     {
-      title: "Computer Vision & NLP",
+      title: "Deep Learning & Computer Vision",
+      icon: <Cpu className="h-6 w-6" />,
+      items: [
+        "CNNs & Transfer Learning",
+        "Object Detection (YOLO v5 / v8 / v11)",
+        "Multi-Object Tracking (DeepSORT, ByteTrack)",
+        "Image Classification & Localization",
+        "Vision-Language Models (CLIP)",
+      ],
+    },
+
+    {
+      title: "Frameworks & Libraries",
+      icon: <Database className="h-6 w-6" />,
+      items: [
+        "Scikit-learn",
+        "PyTorch / TensorFlow",
+        "OpenCV",
+        "Ultralytics YOLO",
+        "Roboflow",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+      ],
+    },
+
+    {
+      title: "Tools & Development Environment",
       icon: <Wrench className="h-6 w-6" />,
       items: [
-        "Image Classification",
-        "Object Detection (YOLO v5 / v8 / v11)",
-        "Vision–Language Models (CLIP)",
-        "Text Embeddings",
-        "DeepSORT",
-        "ByteTrack",
-      ],
-    },
-    {
-      title: "Development Tools",
-      icon: <Database className="h-6 w-6" />,
-      items: [
-        "VS Code",
-        "Jupyter Notebook / Colab",
         "Git & GitHub",
         "Docker",
+        "VS Code",
+        "Jupyter Notebook",
+        "Google Colab",
       ],
     },
+
     {
-      title: "Model Serving & Utilities",
-      icon: <Database className="h-6 w-6" />,
+      title: "Deployment & Real-Time AI Systems",
+      icon: <Rocket className="h-6 w-6" />,
       items: [
-        "Streamlit",
         "Flask APIs",
+        "Streamlit Apps",
         "Firebase",
-        "Replit",
-        "Real-time AI Systems",
-        "ESP32 / IoT Integration",
+        "Real-time AI Pipelines",
+        "Edge / IoT Integration (ESP32)",
       ],
     },
   ];
@@ -83,12 +108,6 @@ const Skills = () => {
                   </li>
                 ))}
               </ul>
-
-              {section.description && (
-                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                  {section.description}
-                </p>
-              )}
             </div>
           ))}
         </div>
