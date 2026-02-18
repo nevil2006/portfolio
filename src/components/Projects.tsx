@@ -17,6 +17,19 @@ const FeaturedProjects = () => {
         "Reduced congestion and improved emergency vehicle prioritization."
     },
     {
+      title: "AI-Powered Biometric Authentication System",
+      date: "Jan 2026 – Feb 2026",
+      link: "https://github.com/nevil2006/biometric-authentication",
+      objective:
+        "Built a secure multi-factor authentication system combining OTP verification, face recognition, and liveness detection.",
+      outcome:
+        "Implemented cosine similarity-based face embedding matching with secure database storage.",
+      skills:
+        "React, Flask, SQLAlchemy, OpenCV, Cosine Similarity, Twilio",
+      highlight:
+        "Prevented spoof attacks using real-time liveness detection and AI-based face matching."
+    },
+    {
       title: "Pathology Image Analysis using CLIP & ResNet50",
       date: "Jun 2025 – Jul 2025",
       link: "https://github.com/nevil2006/medical-analysis-app",
