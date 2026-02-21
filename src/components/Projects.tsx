@@ -75,10 +75,14 @@ export default function FeaturedProjects() {
       : projects.filter((p) => p.category === activeTab);
 
   return (
-    <section className="py-12 px-6 lg:px-20">
-      <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
+    <section
+      id="projects"
+      className="py-32 px-6 lg:px-20 scroll-mt-28"
+    >
+      <h2 className="text-3xl font-bold text-center mb-6">
+        Projects
+      </h2>
 
-      {/* Tabs */}
       <div className="flex justify-center gap-3 mb-10 flex-wrap">
         {tabs.map((tab) => (
           <button
@@ -96,7 +100,6 @@ export default function FeaturedProjects() {
         ))}
       </div>
 
-      {/* Projects */}
       <div className="grid md:grid-cols-2 gap-8">
         {filteredProjects.map((project, index) => (
           <Card
