@@ -3,12 +3,13 @@ import { Code, Brain, Cpu, Database, Wrench, Rocket } from "lucide-react";
 const Skills = () => {
   const skillSections = [
     {
-      title: "Programming & Core Tech",
+      title: "Programming & Core Technologies",
       icon: <Code className="h-6 w-6" />,
       items: [
         "Python",
         "JavaScript",
         "SQL",
+        "Embedded C",
         "HTML",
         "CSS",
         "Bootstrap",
@@ -16,15 +17,15 @@ const Skills = () => {
     },
 
     {
-      title: "Machine Learning & Data Pipeline",
+      title: "Machine Learning & Data Pipelines",
       icon: <Brain className="h-6 w-6" />,
       items: [
-        "Supervised & Unsupervised Learning",
+        "Supervised and Unsupervised Learning",
         "Feature Engineering",
-        "Data Cleaning & Preprocessing",
+        "Data Cleaning and Preprocessing",
         "Model Evaluation (Precision, Recall, F1)",
         "Hyperparameter Tuning",
-        "Experimentation & Model Optimization",
+        "Experimentation and Model Optimization",
       ],
     },
 
@@ -32,11 +33,12 @@ const Skills = () => {
       title: "Deep Learning & Computer Vision",
       icon: <Cpu className="h-6 w-6" />,
       items: [
-        "CNNs & Transfer Learning",
-        "Object Detection (YOLO v5 / v8 / v11)",
+        "CNNs and Transfer Learning",
+        "Object Detection (YOLO v5, v8, v11)",
         "Multi-Object Tracking (DeepSORT, ByteTrack)",
-        "Image Classification & Localization",
+        "Image Classification and Localization",
         "Vision-Language Models (CLIP)",
+        "Real-Time Vision Systems",
       ],
     },
 
@@ -45,7 +47,8 @@ const Skills = () => {
       icon: <Database className="h-6 w-6" />,
       items: [
         "Scikit-learn",
-        "PyTorch / TensorFlow",
+        "PyTorch",
+        "TensorFlow",
         "OpenCV",
         "Ultralytics YOLO",
         "Roboflow",
@@ -56,10 +59,24 @@ const Skills = () => {
     },
 
     {
+      title: "Embedded Systems & IoT",
+      icon: <Cpu className="h-6 w-6" />,
+      items: [
+        "ESP32 Development",
+        "Sensor Interfacing (MPU6050)",
+        "I2C Communication",
+        "State Machine Based Design",
+        "Real-Time Embedded Systems",
+        "Hardware–Software Integration",
+        "Wokwi Simulation",
+      ],
+    },
+
+    {
       title: "Tools & Development Environment",
       icon: <Wrench className="h-6 w-6" />,
       items: [
-        "Git & GitHub",
+        "Git and GitHub",
         "Docker",
         "VS Code",
         "Jupyter Notebook",
@@ -68,14 +85,15 @@ const Skills = () => {
     },
 
     {
-      title: "Deployment & Real-Time AI Systems",
+      title: "Deployment & Real-Time Systems",
       icon: <Rocket className="h-6 w-6" />,
       items: [
-        "Flask APIs",
-        "Streamlit Apps",
-        "Firebase",
-        "Real-time AI Pipelines",
-        "Edge / IoT Integration (ESP32)",
+        "Flask REST APIs",
+        "Streamlit Applications",
+        "Firebase Integration",
+        "Real-Time AI Pipelines",
+        "Edge and IoT Integration",
+        "System Validation and Testing",
       ],
     },
   ];
@@ -84,7 +102,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-gradient mb-12">
-          Skills & Technologies
+          Skills and Technologies
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
