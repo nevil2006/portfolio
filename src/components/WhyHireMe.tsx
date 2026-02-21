@@ -1,4 +1,4 @@
-import { Bot, Trophy, Briefcase, BookOpen, Zap } from "lucide-react";
+import { Bot, Trophy, Briefcase, BookOpen, Zap, Cpu } from "lucide-react";
 
 const WhyHireMe = () => {
   const reasons = [
@@ -42,6 +42,14 @@ const WhyHireMe = () => {
         "Research-driven learner and active hackathon participant, continuously improving skills while focusing on strong fundamentals and system-level problem solving.",
       highlight: "⚡",
       metric: "29+ events",
+    },
+    {
+      icon: <Cpu className="h-10 w-10" />,
+      title: "System Thinking & Reliability",
+      description:
+        "Strong system-level mindset with experience designing reliable pipelines, handling real-time constraints, validating edge cases, and ensuring consistent performance in real-world environments.",
+      highlight: "🧠",
+      metric: "Real-time systems focus",
     },
   ];
 
