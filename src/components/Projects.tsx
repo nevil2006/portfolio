@@ -11,6 +11,7 @@ const projects = [
     objective: "Real-time traffic signal control using vehicle detection.",
     outcome: "Approved by Police Department and deployed live.",
     skills: "YOLOv11s, ESP32-CAM, OpenCV, DeepSORT",
+    isFeatured: true,
   },
   {
     title: "Embedded IoT-Based Fall Detection System (Mentorship)",
@@ -22,6 +23,7 @@ const projects = [
     outcome:
       "Reliable offline fall detection using deterministic logic and state-machine based confirmation.",
     skills: "ESP32, MPU6050, Embedded C, I2C, LCD, Buzzer",
+    isFeatured: true,
   },
   {
     title: "Biometric Authentication System",
@@ -31,6 +33,7 @@ const projects = [
     objective: "Multi-factor authentication with face recognition.",
     outcome: "Prevents spoofing using liveness detection.",
     skills: "OpenCV, Flask, React, Cosine Similarity",
+    isFeatured: true,
   },
   {
     title: "Pathology Image Analysis",
@@ -68,7 +71,7 @@ export default function FeaturedProjects() {
 
   const filteredProjects =
     activeTab === "All"
-      ? projects
+      ? projects.filter((p) => p.isFeatured)
       : projects.filter((p) => p.category === activeTab);
 
   return (
