@@ -10,16 +10,18 @@ const projects = [
     link: "https://github.com/nevil2006/AI-Based-Smart-Traffic-Management-System-with-Emergency-Vehicle-Prioritization",
     objective: "Real-time traffic signal control using vehicle detection.",
     outcome: "Approved by Police Department and deployed live.",
-    skills: "YOLOv11s, ESP32-CAM, OpenCV",
+    skills: "YOLOv11s, ESP32-CAM, OpenCV, DeepSORT",
   },
   {
-    title: "AI-Based Elderly Fall Detection System",
+    title: "Embedded IoT-Based Fall Detection System (Mentorship)",
     category: "AI + IoT",
-    date: "Jan 2026 – Feb 2026",
-    link: "https://github.com/nevil2006/fall-detection",
-    objective: "Detects elderly falls using sensor fusion & ML.",
-    outcome: "Triggers SMS & call alerts on confirmed fall.",
-    skills: "ESP32, MPU6050, ML, Twilio",
+    date: "Feb 2026",
+    link: "https://github.com/nevil2006",
+    objective:
+      "Design and development of a real-time embedded fall detection system for healthcare safety.",
+    outcome:
+      "Reliable offline fall detection using deterministic logic and state-machine based confirmation.",
+    skills: "ESP32, MPU6050, Embedded C, I2C, LCD, Buzzer",
   },
   {
     title: "Biometric Authentication System",
@@ -28,15 +30,15 @@ const projects = [
     link: "https://github.com/nevil2006/biometric-authentication",
     objective: "Multi-factor authentication with face recognition.",
     outcome: "Prevents spoofing using liveness detection.",
-    skills: "OpenCV, Flask, React",
+    skills: "OpenCV, Flask, React, Cosine Similarity",
   },
   {
     title: "Pathology Image Analysis",
     category: "AI / ML",
     date: "Jun 2025 – Jul 2025",
     link: "https://github.com/nevil2006/medical-analysis-app",
-    objective: "Breast lesion classification using CLIP.",
-    outcome: "Improved diagnosis support using AI.",
+    objective: "Breast lesion classification using vision-language models.",
+    outcome: "Improved diagnosis support through image-based analysis.",
     skills: "CLIP, ResNet50, PyTorch",
   },
   {
@@ -44,9 +46,9 @@ const projects = [
     category: "Full Stack",
     date: "Oct 2025 – Present",
     link: "https://github.com/nevil2006/career-compass",
-    objective: "AI-powered career recommendation platform.",
-    outcome: "Generates personalized learning paths.",
-    skills: "Next.js, FastAPI, ML",
+    objective: "Career guidance platform with structured learning paths.",
+    outcome: "Generates personalized recommendations for users.",
+    skills: "Next.js, FastAPI, Machine Learning",
   },
   {
     title: "Eco-Friendly Website",
@@ -54,7 +56,7 @@ const projects = [
     date: "May 2025 – Jun 2025",
     link: "https://github.com/nevil2006/eco-friendly-website-frontened",
     objective: "Responsive product showcase website.",
-    outcome: "Clean and modern UI.",
+    outcome: "Clean and modern user interface.",
     skills: "HTML, CSS, Bootstrap",
   },
 ];
@@ -71,9 +73,7 @@ export default function FeaturedProjects() {
 
   return (
     <section className="py-12 px-6 lg:px-20">
-      <h2 className="text-3xl font-bold text-center mb-6">
-        Projects
-      </h2>
+      <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
 
       {/* Tabs */}
       <div className="flex justify-center gap-3 mb-10 flex-wrap">
@@ -107,9 +107,15 @@ export default function FeaturedProjects() {
               <p className="text-sm text-gray-500 mb-3">
                 {project.date}
               </p>
-              <p><strong>Objective:</strong> {project.objective}</p>
-              <p><strong>Outcome:</strong> {project.outcome}</p>
-              <p className="mt-2"><strong>Skills:</strong> {project.skills}</p>
+              <p>
+                <strong>Objective:</strong> {project.objective}
+              </p>
+              <p>
+                <strong>Outcome:</strong> {project.outcome}
+              </p>
+              <p className="mt-2">
+                <strong>Skills:</strong> {project.skills}
+              </p>
 
               <a
                 href={project.link}
