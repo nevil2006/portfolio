@@ -68,10 +68,13 @@ const tabs = ["All", "AI + IoT", "AI / ML", "Full Stack", "Web"];
 
 export default function FeaturedProjects() {
   const [activeTab, setActiveTab] = useState("All");
+  const [showAllInAllTab, setShowAllInAllTab] = useState(false);
 
   const filteredProjects =
     activeTab === "All"
-      ? projects.filter((p) => p.isFeatured)
+      ? showAllInAllTab
+        ? projects
+        : projects.filter((p) => p.isFeatured)
       : projects.filter((p) => p.category === activeTab);
 
   return (
@@ -83,11 +86,15 @@ export default function FeaturedProjects() {
         Projects
       </h2>
 
+      {/* Tabs */}
       <div className="flex justify-center gap-3 mb-10 flex-wrap">
         {tabs.map((tab) => (
           <button
             key={tab}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => {
+              setActiveTab(tab);
+              setShowAllInAllTab(false);
+            }}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all
               ${
                 activeTab === tab
@@ -100,6 +107,7 @@ export default function FeaturedProjects() {
         ))}
       </div>
 
+      {/* Projects Grid */}
       <div className="grid md:grid-cols-2 gap-8">
         {filteredProjects.map((project, index) => (
           <Card
@@ -136,6 +144,18 @@ export default function FeaturedProjects() {
           </Card>
         ))}
       </div>
+
+      {/* View All Button (only for All tab) */}
+      {activeTab === "All" && !showAllInAllTab && (
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => setShowAllInAllTab(true)}
+            className="px-6 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+          >
+            View All Projects
+          </button>
+        </div>
+      )}
     </section>
   );
 }
