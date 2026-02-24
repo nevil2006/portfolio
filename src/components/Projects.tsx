@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Github } from "lucide-react";
 
 const projects = [
+  // ===== FEATURED (ALL SECTION ORDER) =====
   {
     title: "Smart Traffic Management System",
     category: "AI + IoT",
@@ -27,7 +28,7 @@ const projects = [
   },
   {
     title: "Biometric Authentication System",
-    category: "AI / ML",
+    category: "AI / ML / CV",
     date: "Jan 2026 – Feb 2026",
     link: "https://github.com/nevil2006/biometric-authentication",
     objective: "Multi-factor authentication with face recognition.",
@@ -37,13 +38,16 @@ const projects = [
   },
   {
     title: "Pathology Image Analysis",
-    category: "AI / ML",
+    category: "AI / ML / CV",
     date: "Jun 2025 – Jul 2025",
     link: "https://github.com/nevil2006/medical-analysis-app",
     objective: "Breast lesion classification using vision-language models.",
     outcome: "Improved diagnosis support through image-based analysis.",
     skills: "CLIP, ResNet50, PyTorch",
+    isFeatured: true,
   },
+
+  // ===== OTHER SECTIONS =====
   {
     title: "Career Compass",
     category: "Full Stack",
@@ -64,7 +68,7 @@ const projects = [
   },
 ];
 
-const tabs = ["All", "AI + IoT", "AI / ML", "Full Stack", "Web"];
+const tabs = ["All", "AI + IoT", "AI / ML / CV", "Full Stack", "Web"];
 
 export default function FeaturedProjects() {
   const [activeTab, setActiveTab] = useState("All");
@@ -78,13 +82,8 @@ export default function FeaturedProjects() {
       : projects.filter((p) => p.category === activeTab);
 
   return (
-    <section
-      id="projects"
-      className="py-32 px-6 lg:px-20 scroll-mt-28"
-    >
-      <h2 className="text-3xl font-bold text-center mb-6">
-        Projects
-      </h2>
+    <section id="projects" className="py-32 px-6 lg:px-20 scroll-mt-28">
+      <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
 
       {/* Tabs */}
       <div className="flex justify-center gap-3 mb-10 flex-wrap">
@@ -145,7 +144,7 @@ export default function FeaturedProjects() {
         ))}
       </div>
 
-      {/* View All Button (only for All tab) */}
+      {/* View All Button */}
       {activeTab === "All" && !showAllInAllTab && (
         <div className="flex justify-center mt-10">
           <button
