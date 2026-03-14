@@ -1,46 +1,55 @@
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      company: "CMLI(Center For Machine Learning And Intelligence)",
+      company: "Lehigh University × KGiSL Institute of Technology",
+      position: "BIOE 396/496 Study Abroad Program Participant",
+      duration: "March 2026",
+      location: "Coimbatore, India",
+      description:
+        "Participated in an international academic collaboration focused on AgriTech and Global Innovation. Worked with students from Lehigh University and KGiSL Institute of Technology on interdisciplinary projects and gained exposure to chemistry laboratory experiments and global research collaboration.",
+      technologies: [
+        "AgriTech",
+        "Global Innovation",
+        "Research Collaboration",
+        "Lab Experiments",
+      ],
+      type: "academic",
+    },
+    {
+      company: "CMLI (Center For Machine Learning And Intelligence)",
       position: "Vision-Language Models Intern",
       duration: "2025",
       location: "Onsite",
-      description: "Developed CLIP-based healthcare imaging solutions for medical diagnosis and analysis",
+      description:
+        "Developed CLIP-based healthcare imaging solutions for medical diagnosis and analysis.",
       technologies: ["CLIP", "PyTorch", "Computer Vision", "Healthcare AI"],
-      type: "internship"
+      type: "internship",
     },
     {
       company: "Hizen.ai",
-      position: "Machine learning Intern",
+      position: "Machine Learning Intern",
       duration: "2023",
       location: "Remote",
-      description: "Built NLP automation pipelines using BERT and advanced ML techniques for document processing",
+      description:
+        "Built NLP automation pipelines using BERT and advanced ML techniques for document processing.",
       technologies: ["BERT", "NLP", "ML Pipelines", "Python"],
-      type: "internship"
+      type: "internship",
     },
-    {
-      {
-  company: "Lehigh University × KGiSL Institute of Technology",
-  position: "BIOE 396/496 Study Abroad Program Participant",
-  duration: "March 2026",
-  location: "Coimbatore, India",
-  description: "Participated in an international academic collaboration focused on AgriTech and Global Innovation. Worked with students from Lehigh University and KGiSL Institute of Technology on interdisciplinary projects and gained exposure to chemistry laboratory experiments and global research collaboration.",
-  technologies: ["AgriTech", "Global Innovation", "Research Collaboration", "Lab Experiments"],
-  type: "academic"
-  },
-    }
   ];
 
   return (
     <section id="experience" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+            Experience
+          </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground">
-            Building AI solutions across healthcare, automation, and data analytics
+            Building AI solutions across healthcare, automation, and data
+            analytics
           </p>
         </div>
 
@@ -50,7 +59,7 @@ const Experience = () => {
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary"></div>
 
           {experiences.map((exp, index) => (
-            <div 
+            <div
               key={index}
               className="relative flex items-start mb-12 slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -70,7 +79,7 @@ const Experience = () => {
                       {exp.company}
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col md:items-end text-sm text-muted-foreground">
                     <div className="flex items-center mb-1">
                       <Calendar className="h-4 w-4 mr-2" />
@@ -90,7 +99,7 @@ const Experience = () => {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIndex) => (
-                    <span 
+                    <span
                       key={techIndex}
                       className="glass px-3 py-1 rounded-full text-sm text-primary font-medium"
                     >
@@ -109,10 +118,13 @@ const Experience = () => {
         {/* Achievement Highlight */}
         <div className="mt-16 text-center slide-up">
           <div className="glass-neon p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10">
-            <h3 className="text-2xl font-bold text-gradient mb-4">Career Highlight</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-4">
+              Career Highlight
+            </h3>
             <p className="text-lg text-muted-foreground">
-              Successfully applied AI and Computer Vision knowledge in real-world internships, 
-              contributing to healthcare imaging, NLP automation, and predictive analytics projects.
+              Successfully applied AI and Computer Vision knowledge in
+              real-world internships, contributing to healthcare imaging,
+              NLP automation, and predictive analytics projects.
             </p>
           </div>
         </div>
