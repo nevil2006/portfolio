@@ -39,54 +39,78 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
+
+        {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Experience</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Experience
+          </h2>
+          <p className="text-lg text-gray-400">
             Building AI solutions across healthcare, automation, and data analytics
           </p>
         </div>
 
+        {/* Timeline */}
         <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+
+          {/* Timeline Line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-500"></div>
 
           {experiences.map((exp, index) => (
             <div key={index} className="relative flex items-start mb-12">
-              <div className="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white"></div>
 
-              <div className="ml-16 p-6 rounded-xl shadow-lg bg-white w-full">
+              {/* Timeline Dot */}
+              <div className="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-black"></div>
+
+              {/* Experience Card */}
+              <div className="ml-16 p-6 rounded-xl shadow-lg bg-white dark:bg-gray-900 w-full transition hover:shadow-xl">
+
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+
+                  {/* Position + Company */}
                   <div>
-                    <h3 className="text-xl font-bold mb-1">{exp.position}</h3>
-                    <div className="flex items-center text-blue-600 font-semibold">
+                    <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">
+                      {exp.position}
+                    </h3>
+
+                    <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       {exp.company}
                     </div>
                   </div>
 
-                  <div className="flex flex-col md:items-end text-sm text-gray-500">
+                  {/* Date + Location */}
+                  <div className="flex flex-col md:items-end text-sm text-gray-500 dark:text-gray-400 mt-3 md:mt-0">
                     <div className="flex items-center mb-1">
                       <Calendar className="h-4 w-4 mr-2" />
                       {exp.duration}
                     </div>
+
                     <div className="flex items-center">
                       <MapPin className="h-4 w-4 mr-2" />
                       {exp.location}
                     </div>
                   </div>
+
                 </div>
 
-                <p className="text-gray-600 mb-4">{exp.description}</p>
+                {/* Description */}
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {exp.description}
+                </p>
 
+                {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 rounded-full text-sm bg-gray-100 text-blue-600"
+                      className="px-3 py-1 rounded-full text-sm bg-gray-100 text-blue-600 dark:bg-gray-800 dark:text-blue-400"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+
               </div>
             </div>
           ))}
