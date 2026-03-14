@@ -20,6 +20,17 @@ const Experience = () => {
       technologies: ["BERT", "NLP", "ML Pipelines", "Python"],
       type: "internship"
     },
+    {
+      {
+  company: "Lehigh University × KGiSL Institute of Technology",
+  position: "BIOE 396/496 Study Abroad Program Participant",
+  duration: "March 2026",
+  location: "Coimbatore, India",
+  description: "Participated in an international academic collaboration focused on AgriTech and Global Innovation. Worked with students from Lehigh University and KGiSL Institute of Technology on interdisciplinary projects and gained exposure to chemistry laboratory experiments and global research collaboration.",
+  technologies: ["AgriTech", "Global Innovation", "Research Collaboration", "Lab Experiments"],
+  type: "academic"
+  },
+    }
   ];
 
   return (
