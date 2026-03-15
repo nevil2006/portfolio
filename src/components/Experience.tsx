@@ -1,3 +1,4 @@
+```javascript
 import { Calendar, MapPin, ExternalLink } from "lucide-react";
 
 const Experience = () => {
@@ -17,6 +18,21 @@ const Experience = () => {
       ],
     },
     {
+      company: "Pinnacle Labs Pvt Ltd",
+      position: "Artificial Intelligence Intern",
+      duration: "February 2026",
+      location: "Remote",
+      description:
+        "Worked as an Artificial Intelligence Intern focusing on developing AI-driven solutions and gaining practical exposure to machine learning workflows. Contributed to building intelligent systems, data preprocessing, and experimenting with AI models for real-world problem solving.",
+      technologies: [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Python",
+        "Data Processing",
+        "AI Development",
+      ],
+    },
+    {
       company: "CMLI (Center For Machine Learning And Intelligence)",
       position: "Vision-Language Models Intern",
       duration: "2025",
@@ -24,15 +40,6 @@ const Experience = () => {
       description:
         "Developed CLIP-based healthcare imaging solutions for medical diagnosis and analysis.",
       technologies: ["CLIP", "PyTorch", "Computer Vision", "Healthcare AI"],
-    },
-    {
-      company: "Hizen.ai",
-      position: "Machine Learning Intern",
-      duration: "2023",
-      location: "Remote",
-      description:
-        "Built NLP automation pipelines using BERT and advanced ML techniques for document processing.",
-      technologies: ["BERT", "NLP", "ML Pipelines", "Python"],
     },
   ];
 
@@ -121,3 +128,4 @@ const Experience = () => {
 };
 
 export default Experience;
+```
