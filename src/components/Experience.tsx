@@ -1,47 +1,46 @@
-```javascript
 import { Calendar, MapPin, ExternalLink } from "lucide-react";
 
 const Experience = () => {
-const experiences = [
-  {
-    company: "Lehigh University × KGiSL Institute of Technology",
-    position: "BIOE 396/496 Study Abroad Program Participant",
-    duration: "March 2026",
-    location: "Coimbatore, India",
-    description:
-      "Participated in an international academic collaboration focused on AgriTech and Global Innovation. Worked with students from Lehigh University and KGiSL Institute of Technology on interdisciplinary projects and gained exposure to chemistry laboratory experiments and global research collaboration.",
-    technologies: [
-      "AgriTech",
-      "Global Innovation",
-      "Research Collaboration",
-      "Lab Experiments",
-    ],
-  },
-  {
-    company: "Pinnacle Labs Pvt Ltd",
-    position: "Artificial Intelligence Intern",
-    duration: "February 2026",
-    location: "Remote",
-    description:
-      "Worked as an Artificial Intelligence Intern focusing on developing AI-driven solutions and gaining practical exposure to machine learning workflows. Contributed to building intelligent systems, data preprocessing, and experimenting with AI models for real-world problem solving.",
-    technologies: [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Python",
-      "Data Processing",
-      "AI Development",
-    ],
-  },
-  {
-    company: "CMLI (Center For Machine Learning And Intelligence)",
-    position: "Vision-Language Models Intern",
-    duration: "2025",
-    location: "Onsite",
-    description:
-      "Developed CLIP-based healthcare imaging solutions for medical diagnosis and analysis.",
-    technologies: ["CLIP", "PyTorch", "Computer Vision", "Healthcare AI"],
-  },
-];
+  const experiences = [
+    {
+      company: "Lehigh University & KGiSL Institute of Technology",
+      position: "BIOE 396/496 Study Abroad Program Participant",
+      duration: "March 2026",
+      location: "Coimbatore, India",
+      description:
+        "Participated in an international academic collaboration focused on AgriTech and Global Innovation. Worked with students from Lehigh University and KGiSL Institute of Technology on interdisciplinary projects and gained exposure to chemistry laboratory experiments and global research collaboration.",
+      technologies: [
+        "AgriTech",
+        "Global Innovation",
+        "Research Collaboration",
+        "Lab Experiments",
+      ],
+    },
+    {
+      company: "Pinnacle Labs Pvt Ltd",
+      position: "Artificial Intelligence Intern",
+      duration: "February 2026",
+      location: "Remote",
+      description:
+        "Worked as an Artificial Intelligence Intern focusing on developing AI-driven solutions and gaining practical exposure to machine learning workflows. Contributed to building intelligent systems, data preprocessing, and experimenting with AI models for real-world problem solving.",
+      technologies: [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Python",
+        "Data Processing",
+        "AI Development",
+      ],
+    },
+    {
+      company: "CMLI (Center For Machine Learning And Intelligence)",
+      position: "Vision-Language Models Intern",
+      duration: "2025",
+      location: "Onsite",
+      description:
+        "Developed CLIP-based healthcare imaging solutions for medical diagnosis and analysis.",
+      technologies: ["CLIP", "PyTorch", "Computer Vision", "Healthcare AI"],
+    },
+  ];
 
   return (
     <section id="experience" className="py-20 px-4">
@@ -121,6 +120,7 @@ const experiences = [
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </section>
@@ -128,4 +128,3 @@ const experiences = [
 };
 
 export default Experience;
-```
