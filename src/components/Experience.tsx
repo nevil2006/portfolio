@@ -17,21 +17,6 @@ const Experience = () => {
       ],
     },
     {
-      company: "Pinnacle Labs Pvt Ltd",
-      position: "Artificial Intelligence Intern",
-      duration: "February 2026",
-      location: "Remote",
-      description:
-        "Worked as an Artificial Intelligence Intern focusing on developing AI-driven solutions and gaining practical exposure to machine learning workflows. Contributed to building intelligent systems, data preprocessing, and experimenting with AI models for real-world problem solving.",
-      technologies: [
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Python",
-        "Data Processing",
-        "AI Development",
-      ],
-    },
-    {
       company: "CMLI (Center For Machine Learning And Intelligence)",
       position: "Vision-Language Models Intern",
       duration: "2025",
