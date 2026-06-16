@@ -84,6 +84,16 @@ const Achievements = () => {
     },
     {
       icon: <CheckCircle className="h-8 w-8" />,
+      title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+      subtitle: "Microsoft",
+      description:
+            "Earned the Microsoft Azure AI Fundamentals (AI-900) certification, demonstrating foundational knowledge of Artificial Intelligence (AI), Machine Learning, Generative AI, Computer Vision, Natural Language Processing (NLP), and Azure AI services.",
+       date: "2024",
+       category: "Microsoft Certification",
+       impact: "Certified",
+     },
+    {
+      icon: <CheckCircle className="h-8 w-8" />,
       title: "Government Project Validation",
       subtitle: "Traffic Management System | Coimbatore",
       description:
