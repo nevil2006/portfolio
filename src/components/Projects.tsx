@@ -3,72 +3,104 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Github } from "lucide-react";
 
 const projects = [
-  // ===== FEATURED (ALL SECTION ORDER) =====
+  // ===== FEATURED PROJECTS =====
   {
     title: "Smart Traffic Management System",
-    category: "AI + IoT",
+    category: ["AI + IoT"],
     date: "Sep 2024 – May 2025",
     link: "https://github.com/nevil2006/AI-Based-Smart-Traffic-Management-System-with-Emergency-Vehicle-Prioritization",
-    objective: "Real-time traffic signal control using vehicle detection.",
-    outcome: "Approved by Police Department and deployed live.",
-    skills: "YOLOv11s, ESP32-CAM, OpenCV, DeepSORT",
+    objective:
+      "Developed a real-time smart traffic management system with emergency vehicle prioritization using AI and IoT.",
+    outcome:
+      "Approved by the Police Department and successfully deployed in a live environment.",
+    skills: "YOLOv11s, ESP32-CAM, OpenCV, DeepSORT, Python",
     isFeatured: true,
   },
   {
-    title: "Embedded IoT-Based Fall Detection System (Mentorship)",
-    category: "AI + IoT",
+    title: "Embedded IoT-Based Fall Detection System",
+    category: ["AI + IoT"],
     date: "Feb 2026",
     link: "https://github.com/nevil2006",
     objective:
-      "Design and development of a real-time embedded fall detection system for healthcare safety.",
+      "Designed and developed a real-time embedded fall detection system for healthcare safety.",
     outcome:
-      "Reliable offline fall detection using deterministic logic and state-machine based confirmation.",
+      "Implemented reliable offline fall detection using deterministic logic and state-machine based confirmation.",
     skills: "ESP32, MPU6050, Embedded C, I2C, LCD, Buzzer",
     isFeatured: true,
   },
   {
-    title: "Biometric Authentication System",
-    category: "AI / ML / CV",
+    title: "AI Biometric Authentication System",
+    category: ["AI / ML / CV"],
     date: "Jan 2026 – Feb 2026",
     link: "https://github.com/nevil2006/biometric-authentication",
-    objective: "Multi-factor authentication with face recognition.",
-    outcome: "Prevents spoofing using liveness detection.",
-    skills: "OpenCV, Flask, React, Cosine Similarity",
+    objective:
+      "Built a secure authentication platform using face recognition, OTP verification, and liveness detection.",
+    outcome:
+      "Developed secure authentication APIs with real-time identity verification and session management.",
+    skills: "Python, Flask, OpenCV, SQLAlchemy, HTML, CSS",
     isFeatured: true,
   },
   {
     title: "Pathology Image Analysis",
-    category: "AI / ML / CV",
+    category: ["AI / ML / CV"],
     date: "Jun 2025 – Jul 2025",
     link: "https://github.com/nevil2006/medical-analysis-app",
-    objective: "Breast lesion classification using vision-language models.",
-    outcome: "Improved diagnosis support through image-based analysis.",
-    skills: "CLIP, ResNet50, PyTorch",
+    objective:
+      "Developed an AI-powered pathology image analysis system for breast lesion classification.",
+    outcome:
+      "Improved diagnostic support using CLIP and ResNet50-based image classification.",
+    skills: "PyTorch, CLIP, ResNet50, Python",
     isFeatured: true,
   },
 
-  // ===== OTHER SECTIONS =====
+  // ===== OTHER PROJECTS =====
+  {
+    title: "Yuno AI Agent Platform",
+    category: ["Full Stack"],
+    date: "Mar 2026",
+    link: "https://github.com/nevil2006",
+    objective:
+      "Developed a multi-agent AI orchestration platform using FastAPI, CrewAI, and Groq LLM.",
+    outcome:
+      "Built scalable REST APIs and intelligent workflow automation for AI-powered productivity.",
+    skills: "FastAPI, CrewAI, Groq API, SQLite, Python",
+  },
   {
     title: "Career Compass",
-    category: "Full Stack",
-    date: "Oct 2025 – Present",
+    category: ["Full Stack"],
+    date: "Oct 2025 – 2026",
     link: "https://github.com/nevil2006/career-compass",
-    objective: "Career guidance platform with structured learning paths.",
-    outcome: "Generates personalized recommendations for users.",
-    skills: "Next.js, FastAPI, Machine Learning",
+    objective:
+      "Built a career guidance platform with structured learning paths and AI-powered recommendations.",
+    outcome:
+      "Generates personalized career roadmaps and skill recommendations for users.",
+    skills: "Next.js, FastAPI, Machine Learning, PostgreSQL",
+  },
+  {
+    title: "Document Masking Tool",
+    category: ["AI / ML / CV", "Full Stack"],
+    date: "Feb 2026",
+    link: "https://github.com/nevil2006",
+    objective:
+      "Developed a document privacy application to detect and mask sensitive information using OCR and image processing.",
+    outcome:
+      "Automated OCR extraction, preprocessing, and secure masking workflows for sensitive documents.",
+    skills: "Python, OpenCV, OCR, Flask, HTML, CSS",
   },
   {
     title: "Eco-Friendly Website",
-    category: "Web",
+    category: ["Full Stack"],
     date: "May 2025 – Jun 2025",
     link: "https://github.com/nevil2006/eco-friendly-website-frontened",
-    objective: "Responsive product showcase website.",
-    outcome: "Clean and modern user interface.",
+    objective:
+      "Developed a responsive website showcasing eco-friendly products and sustainability initiatives.",
+    outcome:
+      "Created a modern, responsive UI with an improved user experience.",
     skills: "HTML, CSS, Bootstrap",
   },
 ];
 
-const tabs = ["All", "AI + IoT", "AI / ML / CV", "Full Stack", "Web"];
+const tabs = ["All", "AI + IoT", "AI / ML / CV", "Full Stack"];
 
 export default function FeaturedProjects() {
   const [activeTab, setActiveTab] = useState("All");
@@ -78,14 +110,21 @@ export default function FeaturedProjects() {
     activeTab === "All"
       ? showAllInAllTab
         ? projects
-        : projects.filter((p) => p.isFeatured)
-      : projects.filter((p) => p.category === activeTab);
+        : projects.filter((project) => project.isFeatured)
+      : projects.filter((project) =>
+          project.category.includes(activeTab)
+        );
 
   return (
-    <section id="projects" className="py-32 px-6 lg:px-20 scroll-mt-28">
-      <h2 className="text-3xl font-bold text-center mb-6">Projects</h2>
+    <section
+      id="projects"
+      className="py-32 px-6 lg:px-20 scroll-mt-28"
+    >
+      <h2 className="text-3xl font-bold text-center mb-6">
+        Projects
+      </h2>
 
-      {/* Tabs */}
+      {/* Category Tabs */}
       <div className="flex justify-center gap-3 mb-10 flex-wrap">
         {tabs.map((tab) => (
           <button
@@ -94,19 +133,18 @@ export default function FeaturedProjects() {
               setActiveTab(tab);
               setShowAllInAllTab(false);
             }}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all
-              ${
-                activeTab === tab
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              activeTab === tab
+                ? "bg-blue-600 text-white"
+                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+            }`}
           >
             {tab}
           </button>
         ))}
       </div>
 
-      {/* Projects Grid */}
+      {/* Project Cards */}
       <div className="grid md:grid-cols-2 gap-8">
         {filteredProjects.map((project, index) => (
           <Card
@@ -117,15 +155,19 @@ export default function FeaturedProjects() {
               <h3 className="text-xl font-semibold mb-1">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-500 mb-3">
+
+              <p className="text-sm text-gray-500 mb-4">
                 {project.date}
               </p>
+
               <p>
                 <strong>Objective:</strong> {project.objective}
               </p>
-              <p>
+
+              <p className="mt-2">
                 <strong>Outcome:</strong> {project.outcome}
               </p>
+
               <p className="mt-2">
                 <strong>Skills:</strong> {project.skills}
               </p>
@@ -134,7 +176,7 @@ export default function FeaturedProjects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center text-blue-600 hover:underline"
+                className="mt-5 inline-flex items-center text-blue-600 hover:underline"
               >
                 <Github className="h-5 w-5 mr-2" />
                 View on GitHub
